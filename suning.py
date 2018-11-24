@@ -227,6 +227,20 @@ class Suning():
 				salekuc = taobao_products[taobao_products_key][3]
 				browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
 				browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
+			
+			''' 更新已有商品价格与库存 '''
+			for size in suning_size:
+				size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
+				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
+				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
+				taobao_products_key = size_key + ";" + color_key
+				saleprice = taobao_products[taobao_products_key][6]
+				salekuc = taobao_products[taobao_products_key][3]
+				browser.find_element_by_css_selector(css_selector_saleprice).clear()
+				browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
+				browser.find_element_by_css_selector(css_selector_salekuc).clear()
+				browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
+		
 		return
 		
 		
