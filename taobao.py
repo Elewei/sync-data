@@ -88,6 +88,16 @@ class Taobao():
 			else:
 				os.remove(c_path)
 		return
+		
+	def failed_data_save(self, filename, suning_productCode, taobao_id):
+		'''filename为写入CSV文件的路径，data为要写入数据列表.'''
+		suning_productCode_str = '%d' %suning_productCode
+		taobao_id_str = '%d' %taobao_id
+		data_str = "{" + suning_productCode_str + ":" + taobao_id_str + "}" + "," + "\n"
+		with open(filename,'a') as file:
+			file.writelines(data_str)
+		file.close()
+		print("成功保存文件") 
 
 
 		

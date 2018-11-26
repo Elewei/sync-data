@@ -21,10 +21,13 @@
 	pip install PyUserInput
 9. geckodriver
 10. pyInstaller
+11. Pillow 图片库
+	pip install Pillow
 """
 
 import json
 import re
+from PIL import Image
 from sync_data import *
 from taobao import Taobao 
 from suning import Suning
@@ -33,13 +36,11 @@ from suning import Suning
 for i in range(len(data)):
 	# 对单个商品信息进行处理 
 	for suning_productCode, taobao_id in data[i].items():
-		try:
-			# 获取data数据中商品ID
-			suning_productCode = suning_productCode
-			taobao_id = taobao_id
-			
+		sync_failed_data = {}
+		try:		
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
+	
 			taobao_product_url = taobao.get_taobao_product_url()
 			taobao_mdskip_url = taobao.get_taobao_product_mdskip_url()
 			headers = taobao.get_taobao_product_headers()
@@ -186,6 +187,19 @@ for i in range(len(data)):
 				image_path = current_dir + "\img\\" + image_name
 				image_key = first_size_key + ";" + key
 				taobao.download_taobao_image(taobao_products[image_key][5], image_path)
+				im = Image.open(image_path)
+				(x, y) = im.size
+				if (x < 800):
+					x_s = 800
+					y_s = y * x_s / x
+					out = im.resize((x_s,int(y_s)),Image.ANTIALIAS)
+					out.save(image_path)
+				
+				if (y < 800):
+					y_s = 800
+					x_s = x * y_s / y
+					out = im.resize((int(x_s),y_s),Image.ANTIALIAS)
+					out.save(image_path)
 				add_color[color] = image_path
 
 			print("修改后add_color:")
@@ -220,6 +234,7 @@ for i in range(len(data)):
 			# 返回首页 
 			browser.get("https://sop.suning.com/sel/tradeCenter/showMainTradeCenter.action")
 		except:
+			taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
 			continue
 		
 
