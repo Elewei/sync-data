@@ -29,7 +29,7 @@ import json
 import re
 from PIL import Image
 from sync_data import *
-from taobao import Taobao 
+from taobao import Taobao
 from suning import Suning
 
 # 折扣比例
@@ -37,54 +37,54 @@ price_cent = 1
 
 # 循环查找data中所有条目
 for i in range(len(data)):
-	# 对单个商品信息进行处理 
+	# 对单个商品信息进行处理
 	for suning_productCode, taobao_id in data[i].items():
 		sync_failed_data = {}
-		try:		
+		try:
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
-	
+
 			taobao_product_url = taobao.get_taobao_product_url()
 			taobao_mdskip_url = taobao.get_taobao_product_mdskip_url()
 			headers = taobao.get_taobao_product_headers()
 			# 淘宝商品由 PVS: {颜色，尺码，价格，库存，折扣，照片}
 			taobao_products = {}
-			# 淘宝颜色由 
+			# 淘宝颜色由
 			taobao_colors = {}
 			taobao_sizes = {}
-			
+
 			# 初始并实例化苏宁商品类
 			suning = Suning(suning_productCode)
 			suning_product_url = suning.get_suning_product_url()
 			suning_products = {}
-			
+
 			# 获取淘宝页面信息
 			soup = taobao.get_taobao_page(taobao_product_url)
-		
+
 			# 获取淘宝data数据
 			product_json = taobao.get_taobao_product_json_data(soup)
-			
+
 			#获取淘宝setMdskip数据
 			setMdskip_json = taobao.get_taobao_setmdskip_data(taobao_mdskip_url, headers)
 			print("打印淘宝setMDskip数据：")
 			print(setMdskip_json)
 			print("\n\n")
-			
+
 			if setMdskip_json == None:
 				print("Cookie 信息过期")
 				break
-			
+
 			#处理setMdskip_json数据
 			setMdskip_data = json.loads(setMdskip_json)
 			priceInfo = setMdskip_data['defaultModel']['itemPriceResultDO']['priceInfo']
 			skuQuantity = setMdskip_data['defaultModel']['inventoryDO']['skuQuantity']
-			
+
 			# 处理json数据
-			json_data = json.loads(product_json)	
+			json_data = json.loads(product_json)
 			skuList = json_data['valItemInfo']['skuList']
 			skuMap = json_data['valItemInfo']['skuMap']
 			propertyPics = json_data['propertyPics']
-		
+
 			# 获取淘宝商品信息
 			for list in skuList:
 				# 初始化一个淘宝商品项目
@@ -130,23 +130,23 @@ for i in range(len(data)):
 				taobao_item.append(skuId)
 				# 最后将单个淘宝项目添加入淘宝商品项中，key为PVS
 				taobao_products[str_pvs] = taobao_item
-			
-			
+
+
 			# 打印当前淘宝商品颜色
 			print("打印当前淘宝商品颜色")
 			print(taobao_colors)
 			print("\n\n")
-			
+
 			# 打印当前淘宝商品尺码
 			print("打印当前淘宝商品尺码")
 			print(taobao_sizes)
 			print("\n\n")
-			
+
 			# 打印当前淘宝商品信息
 			print("打印当前淘宝商品信息")
 			print(taobao_products)
 			print("\n\n")
-				
+
 
 			# 获取本地Firefox sessionID 且复用
 			if i == 0:
@@ -155,29 +155,29 @@ for i in range(len(data)):
 				driver.get(suning_url)
 				browser = suning.create_driver_session(driver.session_id, driver.command_executor._url)
 
-				# 延迟80s，等待登录 
+				# 延迟80s，等待登录
 				suning.delay_time( 80 )
 			else:
 				# 延迟2s，等待页面加载
-				suning.delay_time( 2 )	
-			
-			
-			# 跳转到苏宁编辑商品链接 
+				suning.delay_time( 2 )
+
+
+			# 跳转到苏宁编辑商品链接
 			browser.get(suning_product_url)
 
-			# 延迟3s，等待页面加载 
+			# 延迟3s，等待页面加载
 			suning.delay_time( 3 )
 
-			# 获取苏宁商品颜色 
+			# 获取苏宁商品颜色
 			suning_products['color'] = suning.get_suning_product_color(browser)
 
-			# 获取苏宁商品尺码 
+			# 获取苏宁商品尺码
 			suning_products['size'] = suning.get_suning_product_size(browser)
-			
-			# 比较苏宁淘宝商品颜色 
+
+			# 比较苏宁淘宝商品颜色
 			add_color = suning.compare_taobao_suning_color(taobao_colors, suning_products['color'])
 
-			# 比较苏宁淘宝商品尺码 
+			# 比较苏宁淘宝商品尺码
 			add_size = suning.compare_taobao_suning_size(taobao_sizes, suning_products['size'])
 
 			# 下载需要添加颜色的照片且修改照片信息
@@ -207,38 +207,35 @@ for i in range(len(data)):
 
 			print("修改后add_color:")
 			print(add_color)
-			
-			# 添加苏宁商品颜色 
+
+			# 添加苏宁商品颜色
 			suning.add_suning_product_color(browser, add_color)
 
-			# 添加苏宁商品尺码 
+			# 添加苏宁商品尺码
 			suning.add_suning_product_size(browser, add_size)
 
-			# 填写商品价格与库存 
-			suning.add_suning_product_sku(browser, add_color, suning_products['size'], add_size, suning_products['color'], 
+			# 填写商品价格与库存
+			suning.add_suning_product_sku(browser, add_color, suning_products['size'], add_size, suning_products['color'],
 											taobao_products, taobao_colors, taobao_sizes)
 
-			# 上传苏宁颜色照片 
+			# 上传苏宁颜色照片
 			suning.upload_suning_product_image(browser, add_color, suning_products['size'][0])
-			
-			# 延迟2s，等待登录 
+
+			# 延迟2s，等待登录
 			suning.delay_time( 2 )
-			
-			# 点击上传保存 
+
+			# 点击上传保存
 			browser.find_element_by_id("saveOrUpdateBtn").click()
-			
-			# 延迟5s，等待保存 
+
+			# 延迟5s，等待保存
 			suning.delay_time( 5 )
-			
+
 			# 删除img目录下面所有照片
 			image_path = current_dir + "\img\\"
 			taobao.delete_image(image_path)
-			
-			# 返回首页 
+
+			# 返回首页
 			browser.get("https://sop.suning.com/sel/tradeCenter/showMainTradeCenter.action")
 		except:
 			taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
 			continue
-		
-
-
