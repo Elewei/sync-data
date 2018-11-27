@@ -5,6 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.remote.webdriver import WebDriver as RemoteWebDriver
 
+# 上传照片间隔
+seconds = 2
+
 class Suning():
 	'''苏宁类'''
 	
@@ -184,7 +187,7 @@ class Suning():
 				upload_suning_product_image(self, browser, add_color, size)
 				print("颜色：" + color + "照片: " + image_path + " 上传失败")
 				print("重新开始上传...")
-			time.sleep(2)
+			time.sleep(seconds)
 			print("颜色：" + color + "照片: " + image_path + " 上传成功")			
 		return 
 	

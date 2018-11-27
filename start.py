@@ -32,6 +32,9 @@ from sync_data import *
 from taobao import Taobao 
 from suning import Suning
 
+# 折扣比例
+price_cent = 1
+
 # 循环查找data中所有条目
 for i in range(len(data)):
 	# 对单个商品信息进行处理 
@@ -108,7 +111,7 @@ for i in range(len(data)):
 				# 获取淘宝照片URL
 				taobao_image_url = "https:" + propertyPics[pic_key][0]
 				# 输入商品折扣，计算商品rel_price
-				rel_price = priceInfo[skuId]['promotionList'][0]['price']
+				rel_price = priceInfo[skuId]['promotionList'][0]['price'] * price_cent
 				# 淘宝项目中添加 颜色
 				taobao_item.append(color)
 				# 淘宝项目中添加 尺码
@@ -189,17 +192,17 @@ for i in range(len(data)):
 				taobao.download_taobao_image(taobao_products[image_key][5], image_path)
 				im = Image.open(image_path)
 				(x, y) = im.size
-				if (x < 800):
-					x_s = 800
-					y_s = y * x_s / x
-					out = im.resize((x_s,int(y_s)),Image.ANTIALIAS)
-					out.save(image_path)
-				
-				if (y < 800):
-					y_s = 800
-					x_s = x * y_s / y
-					out = im.resize((int(x_s),y_s),Image.ANTIALIAS)
-					out.save(image_path)
+				if (x < 800 or y < 800):
+					if (x < y):
+						x_s = 1000
+						y_s = y * x_s / x
+						out = im.resize((x_s,int(y_s)),Image.ANTIALIAS)
+						out.save(image_path)
+					else:
+						y_s = 1000
+						x_s = x * y_s / y
+						out = im.resize((int(x_s),y_s),Image.ANTIALIAS)
+						out.save(image_path)
 				add_color[color] = image_path
 
 			print("修改后add_color:")
