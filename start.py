@@ -27,14 +27,48 @@
 
 import json
 import re
+import configparser
 from PIL import Image
-from sync_data import *
 from taobao import Taobao
 from suning import Suning
 
-# 折扣比例
-price_cent = 1
 
+# 加载现有配置文件
+config = configparser.ConfigParser()
+
+# 写入配置文件
+config.read('conf.ini')
+
+# 折扣比例
+price_cent = config['config']['price_cent']
+suning_file_path = config['config']['suning_file_path']
+taobao_file_path = config['config']['taobao_file_path']
+
+# 读取苏宁商品ID
+with open(suning_file_path) as suning_file:
+	suningID_list = suning_file.readlines()
+
+# 读取淘宝商品ID
+with open(taobao_file_path) as taobao_file:
+	taobaoID_list = taobao_file.readlines()
+
+'''
+	商品数据维护清单
+	第一列： 苏宁商品编码
+	第二列： 商家商品编码
+'''
+data = []
+
+i = 0
+while i < len(suningID_list):
+	product_id = {}
+	key = suningID_list[i].strip()
+	value = taobaoID_list[i].strip()
+	product_id[key] = value
+	data.append(product_id)
+	i += 1
+
+	
 # 循环查找data中所有条目
 for i in range(len(data)):
 	# 对单个商品信息进行处理
@@ -111,7 +145,7 @@ for i in range(len(data)):
 				# 获取淘宝照片URL
 				taobao_image_url = "https:" + propertyPics[pic_key][0]
 				# 输入商品折扣，计算商品rel_price
-				rel_price = priceInfo[skuId]['promotionList'][0]['price'] * price_cent
+				rel_price = priceInfo[skuId]['promotionList'][0]['price'] * int(price_cent)
 				# 淘宝项目中添加 颜色
 				taobao_item.append(color)
 				# 淘宝项目中添加 尺码
