@@ -25,15 +25,15 @@
 	pip install Pillow
 """
 
-import json
 import re
+import json
 import configparser
 from PIL import Image
 from taobao import Taobao
 from suning import Suning
 
 
-# 加载现有配置文件
+# 加载配置文件
 config = configparser.ConfigParser()
 
 # 写入配置文件
@@ -56,9 +56,16 @@ with open(taobao_file_path) as taobao_file:
 	商品数据维护清单
 	第一列： 苏宁商品编码
 	第二列： 商家商品编码
+	[
+		{10689230727:527122606845},
+		{},
+		...
+	]
 '''
+# 初始化
 data = []
 
+# 导入数据
 i = 0
 while i < len(suningID_list):
 	product_id = {}
@@ -68,7 +75,9 @@ while i < len(suningID_list):
 	data.append(product_id)
 	i += 1
 
-	
+# Todo1： 将failed_sync_data文件清空
+# Todo2: 将日志写入日志文件
+
 # 循环查找data中所有条目
 for i in range(len(data)):
 	# 对单个商品信息进行处理
