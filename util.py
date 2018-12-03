@@ -13,12 +13,12 @@ with open(suning_file_path) as suning_file:
 with open(taobao_file_path) as taobao_file:
 	taobaoID_list = taobao_file.readlines()
 
-filename = "sync_data_bak.txt"
+filename = "format_data.txt"
 
 i = 0
 
 while i < len(suningID_list):
-	data = "{" + suningID_list[i].strip() + ":" + taobaoID_list[i].strip() + "}," + "\n"
+	data = suningID_list[i].strip() + ";" + taobaoID_list[i].strip() + "\n"
 	with open(filename,'a') as file:
 		file.writelines(data)
 	file.close()

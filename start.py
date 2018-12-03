@@ -37,20 +37,15 @@ from suning import Suning
 config = configparser.ConfigParser()
 
 # 写入配置文件
-config.read('conf.ini')
+config.read('conf.ini', encoding='utf-8')
 
 # 折扣比例
 price_cent = config['config']['price_cent']
-suning_file_path = config['config']['suning_file_path']
-taobao_file_path = config['config']['taobao_file_path']
+data_file_path = config['config']['data_file_path']
 
 # 读取苏宁商品ID
-with open(suning_file_path) as suning_file:
-	suningID_list = suning_file.readlines()
-
-# 读取淘宝商品ID
-with open(taobao_file_path) as taobao_file:
-	taobaoID_list = taobao_file.readlines()
+with open(data_file_path, encoding='utf-8') as data_file:
+	data_file_list = data_file.readlines()
 
 '''
 	商品数据维护清单
@@ -67,10 +62,11 @@ data = []
 
 # 导入数据
 i = 0
-while i < len(suningID_list):
+while i < len(data_file_list):
 	product_id = {}
-	key = suningID_list[i].strip()
-	value = taobaoID_list[i].strip()
+	data_str_list = data_file_list[i].split(';')
+	key = data_str_list[0].strip()
+	value = data_str_list[1].strip()
 	product_id[key] = value
 	data.append(product_id)
 	i += 1
@@ -83,7 +79,7 @@ for i in range(len(data)):
 	# 对单个商品信息进行处理
 	for suning_productCode, taobao_id in data[i].items():
 		sync_failed_data = {}
-		try:
+		try:	
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
 
@@ -106,7 +102,10 @@ for i in range(len(data)):
 
 			# 获取淘宝data数据
 			product_json = taobao.get_taobao_product_json_data(soup)
-
+			print("打印淘宝商品数据：")
+			print(product_json)
+			print("\n\n")
+			
 			#获取淘宝setMdskip数据
 			setMdskip_json = taobao.get_taobao_setmdskip_data(taobao_mdskip_url, headers)
 			print("打印淘宝setMDskip数据：")
@@ -122,7 +121,7 @@ for i in range(len(data)):
 			priceInfo = setMdskip_data['defaultModel']['itemPriceResultDO']['priceInfo']
 			skuQuantity = setMdskip_data['defaultModel']['inventoryDO']['skuQuantity']
 
-			# 处理json数据
+			# 处理product_json数据
 			json_data = json.loads(product_json)
 			skuList = json_data['valItemInfo']['skuList']
 			skuMap = json_data['valItemInfo']['skuMap']
@@ -154,7 +153,7 @@ for i in range(len(data)):
 				# 获取淘宝照片URL
 				taobao_image_url = "https:" + propertyPics[pic_key][0]
 				# 输入商品折扣，计算商品rel_price
-				rel_price = priceInfo[skuId]['promotionList'][0]['price'] * int(price_cent)
+				rel_price = float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent)
 				# 淘宝项目中添加 颜色
 				taobao_item.append(color)
 				# 淘宝项目中添加 尺码
@@ -203,8 +202,7 @@ for i in range(len(data)):
 			else:
 				# 延迟2s，等待页面加载
 				suning.delay_time( 2 )
-
-
+			
 			# 跳转到苏宁编辑商品链接
 			browser.get(suning_product_url)
 
@@ -279,6 +277,7 @@ for i in range(len(data)):
 
 			# 返回首页
 			browser.get("https://sop.suning.com/sel/tradeCenter/showMainTradeCenter.action")
+		
 		except:
 			taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
 			continue
