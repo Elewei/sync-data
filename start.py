@@ -29,6 +29,7 @@ import re
 import json
 import configparser
 from PIL import Image
+from pykeyboard import PyKeyboard
 from taobao import Taobao
 from suning import Suning
 
@@ -42,6 +43,8 @@ config.read('conf.ini', encoding='utf-8')
 # 折扣比例
 price_cent = config['config']['price_cent']
 data_file_path = config['config']['data_file_path']
+upload_image_seconds = config['config']['upload_image_seconds']
+# cookie_str = config['config']['cookie_str']
 
 # 读取苏宁商品ID
 with open(data_file_path, encoding='utf-8') as data_file:
@@ -153,7 +156,7 @@ for i in range(len(data)):
 				# 获取淘宝照片URL
 				taobao_image_url = "https:" + propertyPics[pic_key][0]
 				# 输入商品折扣，计算商品rel_price
-				rel_price = float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent)
+				rel_price = round(float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent), 2)
 				# 淘宝项目中添加 颜色
 				taobao_item.append(color)
 				# 淘宝项目中添加 尺码
@@ -260,14 +263,19 @@ for i in range(len(data)):
 											taobao_products, taobao_colors, taobao_sizes)
 
 			# 上传苏宁颜色照片
-			suning.upload_suning_product_image(browser, add_color, suning_products['size'][0])
+			suning.upload_suning_product_image(browser, add_color, suning_products['size'][0], upload_image_seconds)
 
 			# 延迟2s，等待登录
 			suning.delay_time( 2 )
 
 			# 点击上传保存
-			browser.find_element_by_id("saveOrUpdateBtn").click()
-
+			try:
+				browser.find_element_by_id("saveOrUpdateBtn").click()
+			except:
+				pyk = PyKeyboard()
+				pyk.tap_key(pyk.enter_key)
+				suning.delay_time( 5 )
+				
 			# 延迟5s，等待保存
 			suning.delay_time( 5 )
 

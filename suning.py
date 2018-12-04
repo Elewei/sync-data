@@ -167,7 +167,7 @@ class Suning():
 			browser.find_element_by_css_selector(css_selector_size_click).click()
 		return
 
-	def upload_suning_product_image(self, browser, add_color, size):
+	def upload_suning_product_image(self, browser, add_color, size, upload_image_seconds):
 		''' 上传苏宁商品照片 '''
 		for color, image_path in add_color.items():
 			pyk = PyKeyboard()
@@ -177,7 +177,7 @@ class Suning():
 			ele.click()
 			time.sleep(2)
 			pyk.type_string(image_path)
-			time.sleep(5)
+			time.sleep(upload_image_seconds)
 			try:
 				pyk.tap_key(pyk.enter_key)
 			except:
@@ -199,7 +199,8 @@ class Suning():
 		''' 填写添加商品的颜色与尺码的SKU '''
 		first_sku_saleprice_selector = "tr[key='" + suning_color[0] + "^"+ suning_size[0] + "']>td.saleprice>div>input"
 		for color in add_color.keys():
-			color_key = list(taobao_colors.keys())[list (taobao_colors.values()).index (color)]
+			if color in taobao_colors.values():
+				color_key = list(taobao_colors.keys())[list (taobao_colors.values()).index (color)]
 			for size, size_key in add_size.items():
 				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
 				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
@@ -215,7 +216,8 @@ class Suning():
 
 			''' 填写添加商品的已有尺码的SKU '''
 			for size in suning_size:
-				size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
+				if size in taobao_sizes.values():
+					size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
 				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
 				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
 				taobao_products_key = size_key + ";" + color_key
@@ -230,7 +232,8 @@ class Suning():
 
 		''' 填写已有商品的颜色与尺码的SKU '''
 		for color in suning_color:
-			color_key = list(taobao_colors.keys())[list (taobao_colors.values()).index (color)]
+			if color in taobao_colors.values():
+				color_key = list(taobao_colors.keys())[list (taobao_colors.values()).index (color)]
 			for size, size_key in add_size.items():
 				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
 				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
@@ -246,7 +249,8 @@ class Suning():
 
 			''' 更新已有商品价格与库存 '''
 			for size in suning_size:
-				size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
+				if size in taobao_sizes.values():
+					size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
 				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
 				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
 				taobao_products_key = size_key + ";" + color_key
