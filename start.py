@@ -29,7 +29,6 @@ import re
 import json
 import configparser
 from PIL import Image
-from pykeyboard import PyKeyboard
 from taobao import Taobao
 from suning import Suning
 
@@ -263,28 +262,29 @@ for i in range(len(data)):
 											taobao_products, taobao_colors, taobao_sizes)
 
 			# 上传苏宁颜色照片
-			suning.upload_suning_product_image(browser, add_color, suning_products['size'][0], upload_image_seconds)
-
+			if len(suning_products['size']) != 0:
+				suning.upload_suning_product_image(browser, add_color, suning_products['size'][0], upload_image_seconds)
+			else:
+				suning.upload_suning_product_image_no_size(browser, add_color, upload_image_seconds)
+				
 			# 延迟2s，等待登录
 			suning.delay_time( 2 )
 
 			# 点击上传保存
-			try:
-				browser.find_element_by_id("saveOrUpdateBtn").click()
-			except:
-				pyk = PyKeyboard()
-				pyk.tap_key(pyk.enter_key)
-				suning.delay_time( 5 )
+			browser.find_element_by_id("saveOrUpdateBtn").click()
 				
 			# 延迟5s，等待保存
 			suning.delay_time( 5 )
 
 			# 删除img目录下面所有照片
 			image_path = current_dir + "\img\\"
-			taobao.delete_image(image_path)
+			try:
+				taobao.delete_image(image_path)
+			except:
+				continue
 
 			# 返回首页
-			browser.get("https://sop.suning.com/sel/tradeCenter/showMainTradeCenter.action")
+			#browser.get("https://sop.suning.com/sel/tradeCenter/showMainTradeCenter.action")
 		
 		except:
 			taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)

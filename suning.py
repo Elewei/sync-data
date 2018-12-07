@@ -62,9 +62,14 @@ class Suning():
 		suning_colors = []
 		color_level = 1
 		css_selector = "tr[desc=颜色]>td.laign>div.yanse>div>div:nth-of-type(" + str(color_level) +  ")>input"
-		suning_color = browser.find_element_by_css_selector(css_selector).get_attribute("value")
-		suning_colors.append(suning_color)
-
+		try:
+			suning_color = browser.find_element_by_css_selector(css_selector).get_attribute("value")
+			suning_colors.append(suning_color)
+		except:
+			print("成功获取苏宁商品颜色: ")
+			print(suning_colors)
+			return suning_colors		
+			
 		while suning_color != 'NULL':
 			color_level += 1
 			css_selector = "tr[desc=颜色]>td.laign>div.yanse>div>div:nth-of-type(" + str(color_level) +  ")>input"
@@ -84,8 +89,13 @@ class Suning():
 		suning_sizes = []
 		size_level = 1
 		css_selector = "tr[desc=尺码]>td.laign>div.yanse>div>div:nth-of-type(" + str(size_level) +  ")>input"
-		suning_size = browser.find_element_by_css_selector(css_selector).get_attribute("value")
-		suning_sizes.append(suning_size)
+		try:
+			suning_size = browser.find_element_by_css_selector(css_selector).get_attribute("value")
+			suning_sizes.append(suning_size)
+		except:
+			print("成功获取苏宁商品尺码: ")
+			print(suning_sizes)
+			return suning_sizes
 
 		while suning_size != 'NULL':
 			size_level += 1
@@ -154,8 +164,11 @@ class Suning():
 		css_selector_add_color = "tr[desc='颜色']>td.laign>div.addysbox>div.clearfix>span>input"
 		css_selector_color_click = "tr[desc='颜色']>td.laign>div.addysbox>div.clearfix>a"
 		for color in add_color.keys():
-			browser.find_element_by_css_selector(css_selector_add_color).send_keys(color)
-			browser.find_element_by_css_selector(css_selector_color_click).click()
+			try:
+				browser.find_element_by_css_selector(css_selector_add_color).send_keys(color)
+				browser.find_element_by_css_selector(css_selector_color_click).click()
+			except:
+				return
 		return
 
 	def add_suning_product_size(self, browser, add_size):
@@ -163,8 +176,11 @@ class Suning():
 		css_selector_add_size = "tr[desc='尺码']>td.laign>div.addysbox>div.clearfix>span>input"
 		css_selector_size_click = "tr[desc='尺码']>td.laign>div.addysbox>div.clearfix>a"
 		for size in add_size:
-			browser.find_element_by_css_selector(css_selector_add_size).send_keys(size)
-			browser.find_element_by_css_selector(css_selector_size_click).click()
+			try:
+				browser.find_element_by_css_selector(css_selector_add_size).send_keys(size)
+				browser.find_element_by_css_selector(css_selector_size_click).click()
+			except:
+				return
 		return
 
 	def upload_suning_product_image(self, browser, add_color, size, upload_image_seconds):
@@ -177,7 +193,7 @@ class Suning():
 			ele.click()
 			time.sleep(2)
 			pyk.type_string(image_path)
-			time.sleep(upload_image_seconds)
+			time.sleep(int(upload_image_seconds))
 			try:
 				pyk.tap_key(pyk.enter_key)
 			except:
@@ -191,80 +207,151 @@ class Suning():
 			print("颜色：" + color + "照片: " + image_path + " 上传成功")
 		return
 
+	def upload_suning_product_image_no_size(self, browser, add_color, upload_image_seconds):
+		''' 上传苏宁商品照片, 没有size的情况 '''
+		for color, image_path in add_color.items():
+			pyk = PyKeyboard()
+			css_selector = "tr[key='" + color + "']>td.colortd>div.colorbox>div.lcolor>a.colorup>a"
+			ele = browser.find_element_by_css_selector(css_selector)
+			ele.location_once_scrolled_into_view
+			ele.click()
+			time.sleep(2)
+			pyk.type_string(image_path)
+			time.sleep(int(upload_image_seconds))
+			try:
+				pyk.tap_key(pyk.enter_key)
+			except:
+				pyk.press_key(pyk.alt_key)
+				pyk.tap_key(pyk.function_keys[4])
+				pyk.release_key(pyk.alt_key)
+				upload_suning_product_image(self, browser, add_color, size)
+				print("颜色：" + color + "照片: " + image_path + " 上传失败")
+				print("重新开始上传...")
+			time.sleep(seconds)
+			print("颜色：" + color + "照片: " + image_path + " 上传成功")
+		return
+		
 	def delete_suning_product_color(self):
 		return
 
 	def add_suning_product_sku(self, browser, add_color, suning_size, add_size, suning_color,
 								taobao_products, taobao_colors, taobao_sizes):
 		''' 填写添加商品的颜色与尺码的SKU '''
-		first_sku_saleprice_selector = "tr[key='" + suning_color[0] + "^"+ suning_size[0] + "']>td.saleprice>div>input"
+		if len(suning_size) != 0 and len(suning_color) !=0:
+			first_sku_saleprice_selector = "tr[key='" + suning_color[0] + "^"+ suning_size[0] + "']>td.saleprice>div>input"
+		elif len(suning_size) !=0 :
+			first_sku_saleprice_selector = "tr[key='"+ suning_size[0] + "']>td.saleprice>div>input"
+		else:
+			first_sku_saleprice_selector = "tr[key='" + suning_color[0] + "']>td.saleprice>div>input"			
+		
 		for color in add_color.keys():
 			if color in taobao_colors.values():
 				color_key = list(taobao_colors.keys())[list (taobao_colors.values()).index (color)]
-			for size, size_key in add_size.items():
-				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
-				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
-				taobao_products_key = size_key + ";" + color_key
-				if taobao_products_key in taobao_products:
-					saleprice = taobao_products[taobao_products_key][6]
-					salekuc = taobao_products[taobao_products_key][3]
-				else:
-					saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
-					salekuc = 0
-				browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
-				browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
+			else:
+				color_key = '0'
+			
+			if len(suning_size) != 0:
+				for size, size_key in add_size.items():
+					css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
+					css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
+					taobao_products_key = size_key + ";" + color_key
+					if taobao_products_key in taobao_products:
+						saleprice = taobao_products[taobao_products_key][6]
+						salekuc = taobao_products[taobao_products_key][3]
+					else:
+						saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
+						salekuc = 0
+					browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
+					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
 
-			''' 填写添加商品的已有尺码的SKU '''
-			for size in suning_size:
-				if size in taobao_sizes.values():
-					size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
-				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
-				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
-				taobao_products_key = size_key + ";" + color_key
-				if taobao_products_key in taobao_products:
-					saleprice = taobao_products[taobao_products_key][6]
-					salekuc = taobao_products[taobao_products_key][3]
-				else:
-					saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
-					salekuc = 0
-				browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
-				browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
-
+				''' 填写添加商品的已有尺码的SKU '''
+				for size in suning_size:
+					if size in taobao_sizes.values():
+						size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
+					else:
+						size_key = '0'
+					css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
+					css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
+					taobao_products_key = size_key + ";" + color_key
+					if taobao_products_key in taobao_products:
+						saleprice = taobao_products[taobao_products_key][6]
+						salekuc = taobao_products[taobao_products_key][3]
+					else:
+						saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
+						salekuc = 0
+					browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
+					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
+			else:
+				for size_key in taobao_sizes.keys():
+					css_selector_saleprice = "tr[key='" + color + "']>td.saleprice>div>input"
+					css_selector_salekuc = "tr[key='" + color + "']>td.salekuc>div>input"
+					taobao_products_key = size_key + ";" + color_key	
+					if taobao_products_key in taobao_products:
+						saleprice = taobao_products[taobao_products_key][6]
+						salekuc = taobao_products[taobao_products_key][3]
+					else:
+						saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
+						salekuc = 0
+					browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
+					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))					
+					
+			
 		''' 填写已有商品的颜色与尺码的SKU '''
 		for color in suning_color:
 			if color in taobao_colors.values():
 				color_key = list(taobao_colors.keys())[list (taobao_colors.values()).index (color)]
-			for size, size_key in add_size.items():
-				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
-				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
-				taobao_products_key = size_key + ";" + color_key
-				if taobao_products_key in taobao_products:
-					saleprice = taobao_products[taobao_products_key][6]
-					salekuc = taobao_products[taobao_products_key][3]
-				else:
-					saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
-					salekuc = 0					
-				browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
-				browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
+			else:
+				color_key = '0'
+			
+			if len(suning_size) != 0:
+				for size, size_key in add_size.items():
+					css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
+					css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
+					taobao_products_key = size_key + ";" + color_key
+					if taobao_products_key in taobao_products:
+						saleprice = taobao_products[taobao_products_key][6]
+						salekuc = taobao_products[taobao_products_key][3]
+					else:
+						saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
+						salekuc = 0					
+					browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
+					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
 
-			''' 更新已有商品价格与库存 '''
-			for size in suning_size:
-				if size in taobao_sizes.values():
-					size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
-				css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
-				css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
-				taobao_products_key = size_key + ";" + color_key
-				if taobao_products_key in taobao_products:
-					saleprice = taobao_products[taobao_products_key][6]
-					salekuc = taobao_products[taobao_products_key][3]
-				else:
-					saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
-					salekuc = 0	
-				browser.find_element_by_css_selector(css_selector_saleprice).clear()
-				browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
-				browser.find_element_by_css_selector(css_selector_salekuc).clear()
-				browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
-
+				''' 更新已有商品价格与库存 '''
+				for size in suning_size:
+					if size in taobao_sizes.values():
+						size_key = list(taobao_sizes.keys())[list (taobao_sizes.values()).index (size)]
+					else:
+						size_key = '0'
+					css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
+					css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
+					taobao_products_key = size_key + ";" + color_key
+					if taobao_products_key in taobao_products:
+						saleprice = taobao_products[taobao_products_key][6]
+						salekuc = taobao_products[taobao_products_key][3]
+					else:
+						saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
+						salekuc = 0	
+					# 不更新已有商品价格，避免后台告警
+					#browser.find_element_by_css_selector(css_selector_saleprice).clear()
+					#browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
+					browser.find_element_by_css_selector(css_selector_salekuc).clear()
+					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
+			else:
+				for size_key in taobao_sizes.keys():
+					css_selector_saleprice = "tr[key='" + color + "']>td.saleprice>div>input"
+					css_selector_salekuc = "tr[key='" + color + "']>td.salekuc>div>input"
+					taobao_products_key = size_key + ";" + color_key	
+					if taobao_products_key in taobao_products:
+						saleprice = taobao_products[taobao_products_key][6]
+						salekuc = taobao_products[taobao_products_key][3]
+					else:
+						saleprice = browser.find_element_by_css_selector(first_sku_saleprice_selector).get_attribute("value")
+						salekuc = 0
+					#browser.find_element_by_css_selector(css_selector_saleprice).clear()
+					#browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
+					browser.find_element_by_css_selector(css_selector_salekuc).clear()
+					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))				
 		return
 
 
