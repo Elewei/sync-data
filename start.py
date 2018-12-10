@@ -133,23 +133,42 @@ for i in range(len(data)):
 			for list in skuList:
 				# 初始化一个淘宝商品项目
 				taobao_item = []
+				
 				str_names = list['names']
 				names_list = str_names.split()
-				# 获取淘宝商品尺码
-				size = names_list[0]
-				# 获取淘宝商品颜色
-				color = names_list[1]
+				if len(names_list) != 1:
+					# 获取淘宝商品尺码
+					size = names_list[0]
+					# 获取淘宝商品颜色
+					color = names_list[1]
+				else:
+					# 获取淘宝商品尺码
+					size = ""
+					# 获取淘宝商品颜色
+					color = names_list[0]
+					
 				# 获取淘宝商品的key
 				str_pvs = list['pvs']
 				pvs_list = str_pvs.split(';')
-				# 获取淘宝尺码pvs
-				taobao_sizes[pvs_list[0]] = size
-				# 获取淘宝颜色pvs
-				taobao_colors[pvs_list[1]] = color
+				if len(pvs_list) != 1:
+					# 获取淘宝尺码pvs
+					taobao_sizes[pvs_list[0]] = size
+					# 获取淘宝颜色pvs
+					taobao_colors[pvs_list[1]] = color
+				else:
+					# 获取淘宝颜色pvs
+					taobao_colors[pvs_list[0]] = color				
+				
 				# 获取skuMap中pvs的key
 				pvs = ";" + list['pvs'] + ";"
-				# 获取淘宝照片key
-				pic_key = ";" + pvs_list[1] + ";"
+				
+				if len(pvs_list) != 1:
+					# 获取淘宝照片key
+					pic_key = ";" + pvs_list[1] + ";"
+				else:
+					# 获取淘宝照片key
+					pic_key = ";" + pvs_list[0] + ";"
+				
 				#获取skuID
 				skuId = list['skuId']
 				# 获取淘宝照片URL
@@ -225,13 +244,17 @@ for i in range(len(data)):
 
 			# 下载需要添加颜色的照片且修改照片信息
 			# 照片命名格式 img\taobao_id_position.jpg
-			first_size_key = taobao.get_taobao_frist_size_key(taobao_sizes)
+			if taobao_sizes:
+				first_size_key = taobao.get_taobao_frist_size_key(taobao_sizes)
 			current_dir = taobao.get_current_dir()
 			for color, key in add_color.items():
 				str_key = re.sub("[:]", "", key)
 				image_name = str(taobao_id) + "_" + str_key + ".jpg"
 				image_path = current_dir + "\img\\" + image_name
-				image_key = first_size_key + ";" + key
+				if taobao_sizes:
+					image_key = first_size_key + ";" + key
+				else:
+					image_key = key
 				taobao.download_taobao_image(taobao_products[image_key][5], image_path)
 				im = Image.open(image_path)
 				(x, y) = im.size
