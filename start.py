@@ -171,10 +171,29 @@ for i in range(len(data)):
 				
 				#获取skuID
 				skuId = list['skuId']
-				# 获取淘宝照片URL
-				taobao_image_url = "https:" + propertyPics[pic_key][0]
-				# 输入商品折扣，计算商品rel_price
-				rel_price = round(float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent), 2)
+				
+				try:
+					# 获取淘宝照片URL
+					taobao_image_url = "https:" + propertyPics[pic_key][0]
+				except:
+					taobao_image_url = ""
+					if len(pvs_list) != 1:
+						# 获取淘宝尺码pvs
+						del taobao_sizes[pvs_list[0]]
+						# 获取淘宝颜色pvs
+						del taobao_colors[pvs_list[1]]
+					else:
+						# 获取淘宝颜色pvs
+						del taobao_colors[pvs_list[0]]
+					continue		
+				
+				try:
+					# 输入商品折扣，计算商品rel_price, 一种情况
+					rel_price = round(float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent), 2)
+				except:
+					# 输入商品折扣，计算商品rel_price， 第二种情况
+					rel_price = round(float(priceInfo[skuId]['price']) * float(price_cent), 2)
+
 				# 淘宝项目中添加 颜色
 				taobao_item.append(color)
 				# 淘宝项目中添加 尺码
@@ -247,6 +266,7 @@ for i in range(len(data)):
 			if taobao_sizes:
 				first_size_key = taobao.get_taobao_frist_size_key(taobao_sizes)
 			current_dir = taobao.get_current_dir()
+			add_color_remove = []
 			for color, key in add_color.items():
 				str_key = re.sub("[:]", "", key)
 				image_name = str(taobao_id) + "_" + str_key + ".jpg"
@@ -255,22 +275,30 @@ for i in range(len(data)):
 					image_key = first_size_key + ";" + key
 				else:
 					image_key = key
-				taobao.download_taobao_image(taobao_products[image_key][5], image_path)
+				if image_key in taobao_products:
+					taobao.download_taobao_image(taobao_products[image_key][5], image_path)
+				else:
+					add_color_remove.append(color)
+					continue
 				im = Image.open(image_path)
-				(x, y) = im.size
+				rgb_im = im.convert('RGB')
+				(x, y) = rgb_im.size
 				if (x < 800 or y < 800):
 					if (x < y):
 						x_s = 1000
 						y_s = y * x_s / x
-						out = im.resize((x_s,int(y_s)),Image.ANTIALIAS)
+						out = rgb_im.resize((x_s,int(y_s)),Image.ANTIALIAS)
 						out.save(image_path)
 					else:
 						y_s = 1000
 						x_s = x * y_s / y
-						out = im.resize((int(x_s),y_s),Image.ANTIALIAS)
+						out = rgb_im.resize((int(x_s),y_s),Image.ANTIALIAS)
 						out.save(image_path)
 				add_color[color] = image_path
 
+			for color in add_color_remove:
+				del add_color[color]
+			
 			print("修改后add_color:")
 			print(add_color)
 
@@ -285,9 +313,9 @@ for i in range(len(data)):
 											taobao_products, taobao_colors, taobao_sizes)
 
 			# 上传苏宁颜色照片
-			if len(suning_products['size']) != 0:
+			if len(suning_products['color']) != 0 and len(suning_products['size']) != 0:
 				suning.upload_suning_product_image(browser, add_color, suning_products['size'][0], upload_image_seconds)
-			else:
+			elif len(suning_products['color']) != 0:
 				suning.upload_suning_product_image_no_size(browser, add_color, upload_image_seconds)
 				
 			# 延迟2s，等待登录

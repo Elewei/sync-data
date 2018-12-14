@@ -72,10 +72,13 @@ class Taobao():
 		return current_dir
 
 	def download_taobao_image(self, url, image_path):
-		response = requests.get(url, stream=True)
-		with open(image_path, 'wb') as out_file:
-			shutil.copyfileobj(response.raw, out_file)
-		del response
+		try:
+			response = requests.get(url, stream=True)
+			with open(image_path, 'wb') as out_file:
+				shutil.copyfileobj(response.raw, out_file)
+			del response
+		except:
+			print("Invalid url")
 		return
 
 	def delete_image(self, path):

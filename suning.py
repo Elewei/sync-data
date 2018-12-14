@@ -241,8 +241,10 @@ class Suning():
 			first_sku_saleprice_selector = "tr[key='" + suning_color[0] + "^"+ suning_size[0] + "']>td.saleprice>div>input"
 		elif len(suning_size) !=0 :
 			first_sku_saleprice_selector = "tr[key='"+ suning_size[0] + "']>td.saleprice>div>input"
-		else:
+		elif len(suning_color) != 0:
 			first_sku_saleprice_selector = "tr[key='" + suning_color[0] + "']>td.saleprice>div>input"			
+		else:
+			first_sku_saleprice_selector = "tr>td.saleprice>span>input"			
 		
 		for color in add_color.keys():
 			if color in taobao_colors.values():
@@ -250,7 +252,7 @@ class Suning():
 			else:
 				color_key = '0'
 			
-			if len(suning_size) != 0:
+			if len(suning_size) != 0 and len(suning_color) != 0:
 				for size, size_key in add_size.items():
 					css_selector_saleprice = "tr[key='" + color + "^"+ size + "']>td.saleprice>div>input"
 					css_selector_salekuc = "tr[key='" + color + "^"+ size + "']>td.salekuc>div>input"
@@ -281,7 +283,7 @@ class Suning():
 						salekuc = 0
 					browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
 					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))
-			else:
+			elif len(suning_color) != 0:
 				if taobao_sizes:
 					for size_key in taobao_sizes.keys():
 						css_selector_saleprice = "tr[key='" + color + "']>td.saleprice>div>input"
@@ -308,7 +310,16 @@ class Suning():
 						salekuc = 0
 					browser.find_element_by_css_selector(css_selector_saleprice).send_keys(str(saleprice))
 					browser.find_element_by_css_selector(css_selector_salekuc).send_keys(str(salekuc))	
-					
+			else:
+				if taobao_colors:
+					css_selector_saleprice = "tr>td.saleprice>span>input"
+					css_selector_salekuc = "tr>td.salekuc>span>input"
+					for color_key in taobao_colors.keys():
+						taobao_products_key = color_key	
+						saleprice = taobao_products[taobao_products_key][6]
+						salekuc = taobao_products[taobao_products_key][3]
+						break;
+				
 			
 		''' 填写已有商品的颜色与尺码的SKU '''
 		for color in suning_color:
