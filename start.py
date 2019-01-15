@@ -74,7 +74,16 @@ while i < len(data_file_list):
 	i += 1
 
 # Todo1： 将failed_sync_data文件清空
-# Todo2: 将日志写入日志文件
+# Todo2:  将日志写入日志文件
+
+# filename为写入CSV文件的路径，data为要写入数据列表.'''
+with open('failed_sync_data.txt','r+') as file:
+	file.truncate()
+file.close()
+print("成功清除失败文件")
+
+
+failed_data_count = 0
 
 # 循环查找data中所有条目
 for i in range(len(data)):
@@ -84,15 +93,18 @@ for i in range(len(data)):
 		try:	
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
-
+			
+			# http://item.taobao.com/item.htm?id=
 			taobao_product_url = taobao.get_taobao_product_url()
 			taobao_mdskip_url = taobao.get_taobao_product_mdskip_url()
 			headers = taobao.get_taobao_product_headers()
+			
 			# 淘宝商品由 PVS: {颜色，尺码，价格，库存，折扣，照片}
 			taobao_products = {}
-			# 淘宝颜色由
+			# 淘宝颜色
 			taobao_colors = {}
 			taobao_sizes = {}
+			taobao_image_url_list = []
 
 			# 初始并实例化苏宁商品类
 			suning = Suning(suning_productCode)
@@ -101,7 +113,12 @@ for i in range(len(data)):
 
 			# 获取淘宝页面信息
 			soup = taobao.get_taobao_page(taobao_product_url)
-
+			if (soup == 0):
+				print("获取淘宝商品数据失败\n")
+				taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
+				failed_data_count += 1	
+				continue;
+			
 			# 获取淘宝data数据
 			product_json = taobao.get_taobao_product_json_data(soup)
 			print("打印淘宝商品数据：")
@@ -127,92 +144,127 @@ for i in range(len(data)):
 			json_data = json.loads(product_json)
 			skuList = json_data['valItemInfo']['skuList']
 			skuMap = json_data['valItemInfo']['skuMap']
-			propertyPics = json_data['propertyPics']
+			#propertyPics = json_data['propertyPics']
 
-			# 获取淘宝商品信息
-			for list in skuList:
-				# 初始化一个淘宝商品项目
-				taobao_item = []
+			# 获取淘宝sku数据第一列信息
+			first_dl = taobao.get_taobao_sku_first_dl(soup)
+			
+			# 获取第一列的属性值列表
+			content = first_dl.attrs
+			if 'tm-img-prop' not in content['class'] :
+				# 如果第一列是尺码
+				#获取淘宝尺码信息'''
+				taobao_sizes = taobao.get_taobao_product_size(first_dl)
 				
-				str_names = list['names']
-				names_list = str_names.split()
-				if len(names_list) != 1:
-					# 获取淘宝商品尺码
-					size = names_list[0]
-					# 获取淘宝商品颜色
-					color = names_list[1]
-				else:
-					# 获取淘宝商品尺码
-					size = ""
-					# 获取淘宝商品颜色
-					color = names_list[0]
+				#获取淘宝颜色信息 '''
+				next_dl = first_dl.find_next_sibling("dl")
+				next_dl_content = next_dl.attrs
+				if 'tm-img-prop' in next_dl_content['class'] :
+					taobao_colors = taobao.get_taobao_product_color(next_dl)
+					try:
+						taobao_image_url_list = taobao.get_taobao_product_image(next_dl)
+					except:
+						print("未获取淘宝照片")
+						taobao_image_url_list = []
+			elif 'tm-img-prop' in content['class'] :
+				# 如果第一列是颜色
+				# 获取淘宝颜色信息
+				taobao_colors = taobao.get_taobao_product_color(first_dl)
+				# 获取淘宝照片信息
+				try:
+					taobao_image_url_list = taobao.get_taobao_product_image(first_dl)
+				except:
+					print("未获取淘宝照片")
+					taobao_image_url_list = []
+					break;
 					
-				# 获取淘宝商品的key
-				str_pvs = list['pvs']
-				pvs_list = str_pvs.split(';')
-				if len(pvs_list) != 1:
-					# 获取淘宝尺码pvs
-					taobao_sizes[pvs_list[0]] = size
-					# 获取淘宝颜色pvs
-					taobao_colors[pvs_list[1]] = color
+				next_dl = first_dl.find_next_sibling("dl")
+				next_dl_content = next_dl.attrs
+				if 'tm-sale-prop' in next_dl_content['class']:
+					taobao_sizes = taobao.get_taobao_product_size(next_dl)
+			
+			pos = 0
+			for color_key, color in taobao_colors.items():	
+				# 如果淘宝商品尺码不为空
+				if taobao_sizes:
+					for size_key, size in taobao_sizes.items():
+						taobao_item = []
+						str_pvs = size_key + ";" + color_key
+						str_pvs_reverse = color_key + ";" + size_key
+						pvs = ";" + size_key + ";" + color_key + ";"
+						
+						for list in skuList:
+							if list['pvs'] == str_pvs:
+								skuId = list['skuId']
+							elif list['pvs'] == str_pvs_reverse:
+								skuId = list['skuId']
+								pvs = ";" + color_key + ";" + size_key + ";"
+							continue
+						
+						try:
+							# 输入商品折扣，计算商品rel_price, 一种情况
+							rel_price = round(float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent), 2)
+						except:
+							# 输入商品折扣，计算商品rel_price， 第二种情况
+							rel_price = round(float(priceInfo[skuId]['price']) * float(price_cent), 2)					
+						
+						# 淘宝项目中添加 颜色
+						taobao_item.append(color)
+						# 淘宝项目中添加 尺码
+						taobao_item.append(size)
+						# 淘宝项目中添加 价格
+						taobao_item.append(skuMap[pvs]['price'])
+						# 淘宝项目中添加 库存
+						taobao_item.append(skuQuantity[skuId]['quantity'])					
+						# 淘宝项目中添加 折扣
+						taobao_item.append(skuMap[pvs]['priceCent'])
+						# 淘宝项目中添加 照片路径
+						taobao_item.append(taobao_image_url_list[pos])
+						# 淘宝项目中添加 促销价
+						taobao_item.append(rel_price)
+						
+						# 最后将单个淘宝项目添加入淘宝商品项中，key为PVS
+						taobao_products[str_pvs] = taobao_item
 				else:
-					# 获取淘宝颜色pvs
-					taobao_colors[pvs_list[0]] = color				
+					#如果淘宝商品尺码为空
+					size = ""
+					# 初始化淘宝商品项目
+					taobao_item = []
+					str_pvs = color_key
+					pvs = ";" + color_key + ";"
+					
+					for list in skuList:
+						if list['pvs'] == str_pvs:
+							skuId = list['skuId']
+						continue
+					
+					try:
+						# 输入商品折扣，计算商品rel_price, 一种情况
+						rel_price = round(float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent), 2)
+					except:
+						# 输入商品折扣，计算商品rel_price， 第二种情况
+						rel_price = round(float(priceInfo[skuId]['price']) * float(price_cent), 2)
+							
+					# 淘宝项目中添加 颜色
+					taobao_item.append(color)
+					# 淘宝项目中添加 尺码
+					taobao_item.append(size)
+					# 淘宝项目中添加 价格
+					taobao_item.append(skuMap[pvs]['price'])
+					# 淘宝项目中添加 库存
+					taobao_item.append(skuQuantity[skuId]['quantity'])
+					# 淘宝项目中添加 折扣
+					taobao_item.append(skuMap[pvs]['priceCent'])
+					# 淘宝项目中添加 照片路径
+					taobao_item.append(taobao_image_url_list[pos])
+					# 淘宝项目中添加 促销价
+					taobao_item.append(rel_price)
+					# 淘宝项目中添加 skuID
+					# taobao_item.append(skuId)
+					# 最后将单个淘宝项目添加入淘宝商品项中，key为PVS
+					taobao_products[str_pvs] = taobao_item		
 				
-				# 获取skuMap中pvs的key
-				pvs = ";" + list['pvs'] + ";"
-				
-				if len(pvs_list) != 1:
-					# 获取淘宝照片key
-					pic_key = ";" + pvs_list[1] + ";"
-				else:
-					# 获取淘宝照片key
-					pic_key = ";" + pvs_list[0] + ";"
-				
-				#获取skuID
-				skuId = list['skuId']
-				
-				try:
-					# 获取淘宝照片URL
-					taobao_image_url = "https:" + propertyPics[pic_key][0]
-				except:
-					taobao_image_url = ""
-					if len(pvs_list) != 1:
-						# 获取淘宝尺码pvs
-						del taobao_sizes[pvs_list[0]]
-						# 获取淘宝颜色pvs
-						del taobao_colors[pvs_list[1]]
-					else:
-						# 获取淘宝颜色pvs
-						del taobao_colors[pvs_list[0]]
-					continue		
-				
-				try:
-					# 输入商品折扣，计算商品rel_price, 一种情况
-					rel_price = round(float(priceInfo[skuId]['promotionList'][0]['price']) * float(price_cent), 2)
-				except:
-					# 输入商品折扣，计算商品rel_price， 第二种情况
-					rel_price = round(float(priceInfo[skuId]['price']) * float(price_cent), 2)
-
-				# 淘宝项目中添加 颜色
-				taobao_item.append(color)
-				# 淘宝项目中添加 尺码
-				taobao_item.append(size)
-				# 淘宝项目中添加 价格
-				taobao_item.append(skuMap[pvs]['price'])
-				# 淘宝项目中添加 库存
-				taobao_item.append(skuQuantity[skuId]['quantity'])
-				# 淘宝项目中添加 折扣
-				taobao_item.append(skuMap[pvs]['priceCent'])
-				# 淘宝项目中添加 照片路径
-				taobao_item.append(taobao_image_url)
-				# 淘宝项目中添加 促销价
-				taobao_item.append(rel_price)
-				# 淘宝项目中添加 skuID
-				taobao_item.append(skuId)
-				# 最后将单个淘宝项目添加入淘宝商品项中，key为PVS
-				taobao_products[str_pvs] = taobao_item
-
+				pos += 1
 
 			# 打印当前淘宝商品颜色
 			print("打印当前淘宝商品颜色")
@@ -267,7 +319,7 @@ for i in range(len(data)):
 				first_size_key = taobao.get_taobao_frist_size_key(taobao_sizes)
 			current_dir = taobao.get_current_dir()
 			add_color_remove = []
-			for color, key in add_color.items():
+			for color,key in add_color.items():
 				str_key = re.sub("[:]", "", key)
 				image_name = str(taobao_id) + "_" + str_key + ".jpg"
 				image_path = current_dir + "\img\\" + image_name
@@ -275,7 +327,9 @@ for i in range(len(data)):
 					image_key = first_size_key + ";" + key
 				else:
 					image_key = key
+				print(image_key)
 				if image_key in taobao_products:
+					print(taobao_products[image_key][5])
 					taobao.download_taobao_image(taobao_products[image_key][5], image_path)
 				else:
 					add_color_remove.append(color)
@@ -339,4 +393,8 @@ for i in range(len(data)):
 		
 		except:
 			taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
+			failed_data_count += 1
+			if failed_data_count >= 1000:
+				print("错误超过10个，结束，请联系启卫\n")
+				break;
 			continue

@@ -1,3 +1,1155 @@
+
+
+{
+	"valItemInfo": {
+		"skuList": [{
+			"names": "2017新款灰色 XS ",
+			"pvs": "1627207:1541375559;122508275:28313",
+			"skuId": "3274009569957"
+		}, {
+			"names": "2017新款灰色 S ",
+			"pvs": "1627207:1541375559;122508275:28314",
+			"skuId": "3274009569958"
+		}, {
+			"names": "2017新款灰色 L ",
+			"pvs": "1627207:1541375559;122508275:28316",
+			"skuId": "3274009569960"
+		}, {
+			"names": "2017新款灰色 XL ",
+			"pvs": "1627207:1541375559;122508275:28317",
+			"skuId": "3274009569961"
+		}, {
+			"names": "2017新款灰色 M ",
+			"pvs": "1627207:1541375559;122508275:28315",
+			"skuId": "3274009569959"
+		}, {
+			"names": "2017新款黑色 XS ",
+			"pvs": "1627207:1541375560;122508275:28313",
+			"skuId": "3274009569962"
+		}, {
+			"names": "2017新款黑色 S ",
+			"pvs": "1627207:1541375560;122508275:28314",
+			"skuId": "3274009569963"
+		}, {
+			"names": "2017新款黑色 L ",
+			"pvs": "1627207:1541375560;122508275:28316",
+			"skuId": "3274009569965"
+		}, {
+			"names": "2017新款黑色 XL ",
+			"pvs": "1627207:1541375560;122508275:28317",
+			"skuId": "3274009569966"
+		}, {
+			"names": "2017新款黑色 M ",
+			"pvs": "1627207:1541375560;122508275:28315",
+			"skuId": "3274009569964"
+		}],
+		"defSelected": [],
+		"skuMap": {
+			";1627207:1541375559;122508275:28313;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846582526,
+				"stock": 7,
+				"skuId": "3274009569957"
+			},
+			";1627207:1541375560;122508275:28313;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846562046,
+				"stock": 156,
+				"skuId": "3274009569962"
+			},
+			";1627207:1541375559;122508275:28314;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846583550,
+				"stock": 369,
+				"skuId": "3274009569958"
+			},
+			";1627207:1541375559;122508275:28315;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846585598,
+				"stock": 2,
+				"skuId": "3274009569959"
+			},
+			";1627207:1541375559;122508275:28316;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846584574,
+				"stock": 0,
+				"skuId": "3274009569960"
+			},
+			";1627207:1541375559;122508275:28317;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846586622,
+				"stock": 10,
+				"skuId": "3274009569961"
+			},
+			";1627207:1541375560;122508275:28316;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846564094,
+				"stock": 0,
+				"skuId": "3274009569965"
+			},
+			";1627207:1541375560;122508275:28317;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846566142,
+				"stock": 0,
+				"skuId": "3274009569966"
+			},
+			";1627207:1541375560;122508275:28314;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846563070,
+				"stock": 6,
+				"skuId": "3274009569963"
+			},
+			";1627207:1541375560;122508275:28315;": {
+				"priceCent": 9990,
+				"price": "99.90",
+				"cspuId": 1000016846565118,
+				"stock": 0,
+				"skuId": "3274009569964"
+			}
+		},
+		"salesProp": {}
+	},
+	"valLoginIndicator": "//buy.taobao.com/auction/buy.htm?from=itemDetail&id=37113989951",
+	"isShowSizeRecommend": true,
+	"isDoubleElevenItem": true,
+	"isHouseholdService": false,
+	"isSevenDaysRefundment": true,
+	"apiBidCount": "//tbskip.taobao.com/json/show_bid_count.htm?itemNumId=37113989951&old_quantity=21888&date=1544887830000",
+	"valTimeLeft": 48284,
+	"standingDate": 0,
+	"tradeParams": {},
+	"api": {
+		"descUrl": "//dsc.taobaocdn.com/i3/370/131/37113989951/TB1JQMLtAvoK1RjSZFN8qwxMVla.desc|var^desc;sign^ebbd82157046d77e05988b7b6be68127;lang^gbk;t^1545387537",
+		"httpsDescUrl": "//desc.alicdn.com/i3/370/131/37113989951/TB1JQMLtAvoK1RjSZFN8qwxMVla.desc|var^desc;sign^ebbd82157046d77e05988b7b6be68127;lang^gbk;t^1545387537",
+		"fetchDcUrl": "//hdc1.alicdn.com/asyn.htm?pageId=1306569464&userId=352469034"
+	},
+	"tag": {
+		"isShowMeiliXinde": false,
+		"isMedical": false,
+		"isRightRecommend": true,
+		"isShowEcityIcon": false,
+		"isShowYuanchuanIcon": false,
+		"isBrandAttr": true,
+		"isShowTryReport": false,
+		"isAsynDesc": true,
+		"isBrandSiteRightColumn": true,
+		"isShowHouseIcon": false
+	},
+	"isService": false,
+	"isTripUser": false,
+	"cmCatId": "0",
+	"cartEnable": true,
+	"renderSystemServer": "//render.taobao.com",
+	"isWTContract": false,
+	"isOnlyInMobile": false,
+	"isAreaSell": true,
+	"isMultiPoint": false,
+	"isShowSizeHelper": true,
+	"isMeiz": false,
+	"newSelectCityApi": "//mdskip.taobao.com/json/detailSelectCity.do?isAreaSell=true&itemId=37113989951",
+	"initCspuExtraApi": "//ext-mdskip.taobao.com/extension/initCspuExtra.htm",
+	"detail": {
+		"isMemberShopItem": false,
+		"isBundleItem": false,
+		"canEditInItemDet": true,
+		"isAllowReport": true,
+		"isHiddenShopAction": false,
+		"isDownShelf": false,
+		"is0YuanBuy": false,
+		"isCarService": false,
+		"isShowEcityBasicSign": false,
+		"isItemAllowSellerView": true,
+		"goNewAuctionFlow": false,
+		"isShowEcityVerticalSign": false,
+		"reviewListType": 1,
+		"isVaccine": false,
+		"isHasPos": false,
+		"recommendBigMarkDownEndTime": "1477880000000",
+		"isAutoYushou": false,
+		"isOnePriceCar": false,
+		"isVitual3C": false,
+		"isFullCarSell": false,
+		"isHideAttentionBtn": false,
+		"isNABundleItem": false,
+		"double11StartTime": "",
+		"showDiscountRecommend": false,
+		"enableAliMedicalComponent": true,
+		"isOtcDrug": false,
+		"isYYZY": false,
+		"mlhNewDesc": false,
+		"isMainLiaoSku": false,
+		"isHkMilk": false,
+		"isEnableAppleSku": true,
+		"isHkItem": false,
+		"isShowContentModuleTitle": false,
+		"isRx2Count": false,
+		"isHiddenNonBuyprice": false,
+		"isH5NewLogin": true,
+		"isHkO2OItem": false,
+		"isSavingEnergy": false,
+		"showFushiPoiInfo": true,
+		"defaultItemPrice": "99.90",
+		"globalSellItem": false,
+		"isShowEcityDesc": false,
+		"isSkuColorShow": false,
+		"autoccUser": false,
+		"isMenDianInventroy": false,
+		"isMeilihui": false,
+		"isLadderGroupon": false,
+		"isHidePoi": false,
+		"isNewAttraction": true,
+		"isPreSellBrand": false,
+		"loginBeforeCart": false,
+		"isAutoFinancing": false,
+		"showSuperMarketBuy": false,
+		"isPrescriptionDrug": false,
+		"isHasQualification": false,
+		"recommendBigMarkDownStartTime": "1478793600000",
+		"pageType": "default",
+		"isIFCShop": false,
+		"isAlicomMasterCard": false,
+		"isCarCascade": false,
+		"isDianQiMeiJia": false,
+		"isSkuMemorized": false,
+		"addressLevel": 3,
+		"isRx2": false,
+		"isTeMai": false,
+		"allowRate": true,
+		"isShowPreClosed": false,
+		"isO2OStaging": false,
+		"isPurchaseMallVipBuyer": false,
+		"cdn75": false,
+		"isNewMedical": false,
+		"isCarYuEBao": false,
+		"isCyclePurchase": false,
+		"isAliTelecomNew": false,
+		"show9sVideo": true,
+		"isHkDirectSale": false,
+		"isTspace": false,
+		"tryReportDisable": false,
+		"isB2Byao": false,
+		"isRegionLevel": true,
+		"isContractPhoneItem": false,
+		"isYY": false,
+		"supermarketAndQianggou": false,
+		"isZhengChe": false,
+		"isDianZiMendian": false,
+		"isNextDayService": false,
+		"timeKillAuction": false
+	},
+	"apiAddCart": "//cart.taobao.com/add_cart_item.htm?item_id=37113989951",
+	"apiBeans": "//count.taobao.com/counter3?keys=SM_368_dsr-352469034,ICCP_1_37113989951",
+	"idsMod": [],
+	"initApi": "//mdskip.taobao.com/core/initItemDetail.htm?isUseInventoryCenter=true&cartEnable=true&service3C=false&isApparel=true&isSecKill=false&tmallBuySupport=true&isAreaSell=true&tryBeforeBuy=false&offlineShop=false&itemId=37113989951&showShopProm=false&isPurchaseMallPage=false&itemGmtModified=1545444250000&isRegionLevel=true&household=false&sellerPreview=false&queryMemberRight=true&addressLevel=3&isForbidBuyItem=false",
+	"valPointTimes": 1.0,
+	"changeLocationApi": "//mdskip.taobao.com/core/changeLocation.htm?isUseInventoryCenter=true&itemTags=587,907,1163,1291,1478,1483,1803,2049,2059,2178,2443,2507,2635,3019,3394,3915,3974,4097,4107,4166,4363,4491,4550,4811,5835,5954,6146,6401,6411,6603,7046,7105,7371,7947,8641,9665,10818,11083,11339,11531,11595,13953,16321,17473,17739,18379,18763,19266,19403,20609,21442,21697,21762,21953,22145,22209,22273,22337,25282,27649,28353,28482,28737,28802,28865,29697,29761,29889,30273,30337,30401,30657,30849,30977,31489,33217,33281,33345,34113,34433,35713,36161,36417,36418,36929,37569,37633,39233,39489,39745,40897,41922,43137,44930,46338,46914,48898,49218,51329,51585,51841,51969,52801,52994,55041,56130,57026,64129,65281,65986,66241,67521,70401,73089,73601,74369,74561,79489,81793,82306,82625,84673,85697,86081,87425,89089,89665,91201,93313,94145,95105,95169,95617,95745,95809,95873,96513,101762,102017,103489,103617,106881,107393,107457,107458,107522,108225,108673,110401,111489,111490,112001,112193,112385,112386,112961,113602,116546,119298,119426,122306,139778,143746,175490,178754,182210,184578,189058,194626,202050,208770,215106,218434,218626,233026,243906,245058,248962,249090,249858,251138,251778,253570,257666,257730,257858,257986,270210,270914,281666,284290,292098,299202,304322,317570,320514,326210,327618,336258,339394,339522,347074,347842&cartEnable=true&sellerUserTag3=144467031830331520&service3C=false&sellerUserTag2=18015686999678980&isSecKill=false&isAreaSell=true&sellerUserTag4=36028938755016067&offlineShop=false&itemId=37113989951&sellerUserTag=394215276&showShopProm=false&tgTag=true&isPurchaseMallPage=false&isRegionLevel=true&household=false&notAllowOriginPrice=false&addressLevel=3",
+	"isTmallComboSupport": false,
+	"serviceIconList": [],
+	"valPointRate": 0.5,
+	"tradeType": 2,
+	"valMode": 128,
+	"initExtraApi": "//ext-mdskip.taobao.com/extension/initExtra.htm",
+	"itemDO": {
+		"isInRepository": false,
+		"isSupportTryBeforeBuy": false,
+		"reservePrice": "99.90",
+		"imgVedioPic": "https://img.alicdn.com/imgextra/i3/6000000000644/TB2XQA6aJXXWeJjSZFvXXa6lpXa_!!0-0-tbvideo.jpg",
+		"isSecondKillFromMobile": false,
+		"cspuCategorySwitch": false,
+		"isOnline": true,
+		"title": "迪卡侬运动内衣女跑步健身高强度防震聚拢专业背心式文胸RUN K",
+		"isEnterprisePath": false,
+		"showCompanyPurchase": false,
+		"isDcAsyn": true,
+		"feature": "1",
+		"attachImgUrl": [],
+		"isElecCouponItem": false,
+		"brandSiteId": "0",
+		"brandSpecialSold": "false",
+		"sellerNickName": "è¿ªå¡ä¾¬æè°åº",
+		"isSecondKillFromPC": false,
+		"auctionType": "b",
+		"encryptSellerId": "UvG8yMmxSvmv0",
+		"prov": "江苏",
+		"brand": "Decathlon/迪卡侬",
+		"imgVedioUrl": "//cloud.video.taobao.com/play/u/352469034/p/1/e/1/t/8/50028902086.swf",
+		"isDefaultChooseTryBeforeBuy": false,
+		"quantity": 550,
+		"isBidden": false,
+		"hasSku": true,
+		"isNewProGroup": false,
+		"weight": "0",
+		"userId": "352469034",
+		"rootCatId": "1625",
+		"itemId": "37113989951",
+		"validatorUrl": "//store.taobao.com/tadget/shop_stats.htm",
+		"isCustomizedItem": false,
+		"auctionStatus": "0",
+		"isSecondKillFromPCAndWap": false,
+		"brandId": "44506",
+		"sellProgressiveRate": "3_100_1.60;6_0_4.50;9_0_6.00",
+		"spuId": "247399166",
+		"categoryId": "50008881"
+	},
+	"rateConfig": {
+		"itemId": 37113989951,
+		"sellerId": 352469034,
+		"rateScoreCacheDisable": false,
+		"rateSubjectDisable": false,
+		"tryReportDisable": false,
+		"rateScoreDisable": false,
+		"rateEnable": true,
+		"spuId": 247399166,
+		"rateNewChartDisable": false,
+		"listType": 1,
+		"rateCloudDisable": false
+	},
+	"rstShopId": 59991203,
+	"propertyPics": {
+		"default": ["//img.alicdn.com/imgextra/i1/352469034/O1CN01Uw3ze12GbcXuVc8jD_!!0-item_pic.jpg", "//img.alicdn.com/imgextra/i4/352469034/TB2JbZ_nVooBKNjSZPhXXc2CXXa_!!352469034.jpg", "//img.alicdn.com/imgextra/i2/352469034/TB21kUYnWQoBKNjSZJnXXaw9VXa_!!352469034.jpg", "//img.alicdn.com/imgextra/i3/352469034/TB24tRkj0FopuFjSZFHXXbSlXXa_!!352469034.jpg", "//img.alicdn.com/imgextra/i2/352469034/TB2iz.4n67nBKNjSZLeXXbxCFXa_!!352469034.jpg"],
+		";1627207:1541375560;": ["//img.alicdn.com/imgextra/i1/352469034/TB2EO9nplDH8KJjSspnXXbNAVXa_!!352469034.jpg"],
+		";1627207:1541375559;": ["//img.alicdn.com/imgextra/i1/352469034/TB2xWglfBfM8KJjSZFOXXXr5XXa_!!352469034.jpg"]
+	},
+	"tmallRateType": 0,
+	"selectRegionApi": "//mdskip.taobao.com/core/selectRegion.do?isAreaSell=true&itemId=37113989951",
+	"apiItemViews": "//count.taobao.com/counter2?keys=ICVT_7_37113989951&inc=ICVT_7_37113989951&sign=434c5da36ade9d8747e0c75a9366fa0f1b0",
+	"tagsId": "587,907,1163,1291,1478,1483,1803,2049,2059,2178,2443,2507,2635,3019,3394,3915,3974,4097,4107,4166,4363,4491,4550,4811,5835,5954,6146,6401,6411,6603,7046,7105,7371,7947,8641,9665,10818,11083,11339,11531,11595,13953,16321,17473,17739,18379,18763,19266,19403,20609,21442,21697,21762,21953,22145,22209,22273,22337,25282,27649,28353,28482,28737,28802,28865,29697,29761,29889,30273,30337,30401,30657,30849,30977,31489,33217,33281,33345,34113,34433,35713,36161,36417,36418,36929,37569,37633,39233,39489,39745,40897,41922,43137,44930,46338,46914,48898,49218,51329,51585,51841,51969,52801,52994,55041,56130,57026,64129,65281,65986,66241,67521,70401,73089,73601,74369,74561,79489,81793,82306,82625,84673,85697,86081,87425,89089,89665,91201,93313,94145,95105,95169,95617,95745,95809,95873,96513,101762,102017,103489,103617,106881,107393,107457,107458,107522,108225,108673,110401,111489,111490,112001,112193,112385,112386,112961,113602,116546,119298,119426,122306,139778,143746,175490,178754,182210,184578,189058,194626,202050,208770,215106,218434,218626,233026,243906,245058,248962,249090,249858,251138,251778,253570,257666,257730,257858,257986,270210,270914,281666,284290,292098,299202,304322,317570,320514,326210,327618,336258,339394,339522,347074,347842",
+	"url": {
+		"tbskip": "//tbskip.taobao.com",
+		"mdskip": "//mdskip.taobao.com",
+		"tradeForOldTmallBuy": "//stay.buy.tmall.com/order/confirm_order.htm",
+		"tgDetailDomain": "//detail.ju.taobao.com",
+		"detailServer": "//detail.taobao.com",
+		"buyBase": "//buy.taobao.com/auction",
+		"mallList": "//list.tmall.com",
+		"extMdskip": "//ext-mdskip.taobao.com",
+		"xCrossServer": "//mdetail.tmall.com",
+		"tgDomain": "//ju.taobao.com",
+		"rate": "//rate.tmall.com",
+		"tradeBaseUrl": "//trade.taobao.com/trade",
+		"topUploadServerBaseUrl": "//upload.taobao.com",
+		"BIDRedirectionitemDomain": "//paimai.taobao.com"
+	},
+	"tradeConfig": {
+		"1": "//buy.taobao.com/auction/buy_now.jhtml",
+		"2": "//buy.tmall.com/order/confirm_order.htm",
+		"3": "//obuy.tmall.com/home/order/confirm_order.htm",
+		"4": "",
+		"7": "//tw.taobao.com/buy/auction/buy_now.jhtml"
+	},
+	"valCartInfo": {
+		"itemId": "37113989951",
+		"cartUrl": "//cart.taobao.com/my_cart.htm?from=bdetail",
+		"statsUrl": "//go.mmstat.com/1.gif?logtype=2&category=cart_{loc}_50008881"
+	},
+	"isAliTripHK": false,
+	"selectCityApi": "//mdskip.taobao.com/core/selectCity.htm?isAreaSell=true&itemId=37113989951",
+	"getProgressiveInfoApi": "//mdskip.taobao.com/core/getProgressiveInfo.do?platform_type=b2c&fromTryBeforeBuy=false&sellerId=352469034&platform=tmall&category=50008881&sellerPercent=3_100_1.60;6_0_4.50;9_0_6.00"
+}
+
+
+
+{
+	"defaultModel": {
+		"bannerDO": {
+			"success": true
+		},
+		"deliveryDO": {
+			"areaId": 320500,
+			"deliveryAddress": "江苏苏州",
+			"deliverySkuMap": {
+				"default": [{
+					"arrivalNextDay": false,
+					"arrivalThisDay": false,
+					"forceMocked": false,
+					"postage": "快递: 0.00 ",
+					"postageFree": false,
+					"skuDeliveryAddress": "江苏苏州",
+					"type": 0
+				}]
+			},
+			"destination": "苏州市",
+			"success": true
+		},
+		"detailPageTipsDO": {
+			"coupon": {
+				"displayType": 2,
+				"linkText": "去刮券",
+				"logo": "//img.alicdn.com/tps/TB1okcBKVXXXXbBXVXXXXXXXXXX-116-32.png",
+				"txt": "全天猫实物商品通用",
+				"type": 5
+			},
+			"crowdType": 0,
+			"hasCoupon": false,
+			"hideIcons": false,
+			"jhs99": false,
+			"minicartSurprise": 0,
+			"onlyShowOnePrice": false,
+			"priceDisplayType": 4,
+			"primaryPicIcons": [],
+			"prime": false,
+			"showCuntaoIcon": false,
+			"showDou11Style": false,
+			"showDou11SugPromPrice": false,
+			"showDou12CornerIcon": false,
+			"showDuo11Stage": 0,
+			"showJuIcon": true,
+			"showMaskedDou11SugPrice": false,
+			"success": true,
+			"trueDuo11Prom": false
+		},
+		"doubleEleven2014": {
+			"doubleElevenItem": false,
+			"halfOffItem": false,
+			"showAtmosphere": false,
+			"showRightRecommendedArea": false,
+			"step": 0,
+			"success": true
+		},
+		"extendedData": {},
+		"extras": {},
+		"gatewayDO": {
+			"changeLocationGateway": {
+				"queryDelivery": true,
+				"queryProm": true
+			},
+			"success": true,
+			"trade": {
+				"addToBuyNow": {},
+				"addToCart": {}
+			}
+		},
+		"inventoryDO": {
+			"hidden": false,
+			"icTotalQuantity": 234,
+			"skuQuantity": {
+				"3274009569959": {
+					"quantity": 2,
+					"totalQuantity": 2,
+					"type": 1
+				},
+				"3274009569958": {
+					"quantity": 125,
+					"totalQuantity": 366,
+					"type": 1
+				},
+				"3274009569957": {
+					"quantity": 2,
+					"totalQuantity": 8,
+					"type": 1
+				},
+				"3274009569966": {
+					"quantity": 0,
+					"totalQuantity": 0,
+					"type": 1
+				},
+				"3274009569965": {
+					"quantity": 1,
+					"totalQuantity": 1,
+					"type": 1
+				},
+				"3274009569964": {
+					"quantity": 0,
+					"totalQuantity": 0,
+					"type": 1
+				},
+				"3274009569963": {
+					"quantity": 7,
+					"totalQuantity": 7,
+					"type": 1
+				},
+				"3274009569962": {
+					"quantity": 88,
+					"totalQuantity": 141,
+					"type": 1
+				},
+				"3274009569961": {
+					"quantity": 9,
+					"totalQuantity": 10,
+					"type": 1
+				},
+				"3274009569960": {
+					"quantity": 0,
+					"totalQuantity": 0,
+					"type": 1
+				}
+			},
+			"success": true,
+			"totalQuantity": 535,
+			"type": 1
+		},
+		"itemPriceResultDO": {
+			"areaId": 320500,
+			"duo11Item": false,
+			"duo11Stage": 0,
+			"extraPromShowRealPrice": false,
+			"halfOffItem": false,
+			"hasDPromotion": false,
+			"hasMobileProm": false,
+			"hasTmallappProm": false,
+			"hiddenNonBuyPrice": false,
+			"hideMeal": false,
+			"priceInfo": {
+				"3274009569966": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.80",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.00",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569964": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.80",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.00",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569965": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.80",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.00",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569962": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.80",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.00",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569963": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.80",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "99.00",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569960": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569961": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": " 聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569959": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569957": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				},
+				"3274009569958": {
+					"areaSold": true,
+					"onlyShowOnePrice": false,
+					"price": "99.90",
+					"promotionList": [{
+						"amountPromLimit": 0,
+						"amountRestriction": "",
+						"basePriceType": "IcPrice",
+						"canBuyCouponNum": 0,
+						"endTime": 1557849600000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "normal",
+						"start": false,
+						"startTime": 1542340020000,
+						"status": 2,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "卖家优惠",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}],
+					"sortOrder": 0,
+					"suggestivePromotionList": [{
+						"amountPromLimit": 0,
+						"canBuyCouponNum": 0,
+						"endTime": 1545699599000,
+						"extraPromTextType": 0,
+						"extraPromType": 0,
+						"limitProm": false,
+						"postageFree": false,
+						"price": "79.90",
+						"promType": "jhs_warm",
+						"start": false,
+						"startTime": 1545530400000,
+						"status": 1,
+						"tfCartSupport": false,
+						"tmallCartSupport": false,
+						"type": "聚划算",
+						"unLogBrandMember": false,
+						"unLogShopVip": false,
+						"unLogTbvip": false
+					}]
+				}
+			},
+			"queryProm": false,
+			"success": true,
+			"successCall": true,
+			"tmallShopProm": [{
+				"campaignId": 7502600393,
+				"campaignName": "RUN K两件包邮",
+				"endTime": "1548864000000",
+				"houseHoldFor618": false,
+				"isFree": false,
+				"promPlan": [{
+					"msg": "满2件,享部分地区包邮"
+				}, {
+					"msg": "",
+					"unit": 1,
+					"detailMsg": [{
+						"quantity": "2",
+						"method": {
+							"logistics": {
+								"exclusionName": ["海外", "台湾", "香港", "澳门"],
+								"exclusion": ["990100", "710000", "810000", "820000"],
+								"selected": true
+							},
+							"man": "2"
+						},
+						"promotionLevel": 1
+					}]
+				}],
+				"promPlanMsg": ["满2件,享部分地区包邮"],
+				"startTime": "1545011178000",
+				"warmUp": false
+			}]
+		},
+		"memberRightDO": {
+			"activityType": 0,
+			"level": 0,
+			"postageFree": false,
+			"shopMember": false,
+			"success": true,
+			"time": 1,
+			"value": 0.5
+		},
+		"miscDO": {
+			"bucketId": 17,
+			"city": "苏州",
+			"cityId": 320500,
+			"debug": {},
+			"hasCoupon": false,
+			"region": "沧浪区",
+			"regionId": 320502,
+			"rn": "2ad2f549f26e3a9d15685bdab33e20e5",
+			"smartBannerFlag": "top",
+			"success": true,
+			"supportCartRecommend": false,
+			"systemTime": "1545461514259",
+			"town": "",
+			"townId": 0
+		},
+		"regionalizedData": {
+			"success": true
+		},
+		"sellCountDO": {
+			"sellCount": "9108",
+			"success": true
+		},
+		"servicePromise": {
+			"has3CPromise": false,
+			"servicePromiseList": [{
+				"description": "活动后15天内若发生降价，可申请保险赔偿",
+				"displayText": "赠保价险",
+				"icon": "//gw.alicdn.com/tfscom/TB1YtzTXXooBKNjSZPhXXc2CXXa.png",
+				"link": "//rulesale.taobao.com/detail?spm=a2114q.8740881.bodylink.27.ead6783fLRuMS8&cid=347&id=7908",
+				"rank": -1
+			}, {
+				"description": "该商品由中国人保承保正品保证险",
+				"displayText": "正品 保证",
+				"icon": "无",
+				"link": "//www.tmall.com/wow/portal/act/bzj",
+				"rank": -1
+			}, {
+				"description": "极速退款是为诚信会员提供的退款退货流程的专享特权， 额度是根据每个用户当前的信誉评级情况而定",
+				"displayText": "极速退款",
+				"icon": "//img.alicdn.com/bao/album/sys/icon/discount.gif",
+				"link": "//vip.tmall.com/vip/privilege.htm?spm=3.1000588.0.141.2a0ae8&priv=speed",
+				"rank": -1
+			}, {
+				"description": "七天无理由退换",
+				"displayText": "七天无理由退换",
+				"icon": "//img.alicdn.com/tps/i3/T1Vyl6FCBlXXaSQP_X-16-16.png",
+				"link": "//pages.tmall.com/wow/seller/act/seven-day",
+				"rank": -1
+			}],
+			"show": true,
+			"success": true,
+			"titleInformation": []
+		},
+		"soldAreaDataDO": {
+			"cityData": {
+				"allAreaSold": false,
+				"soldAreas": [140800, 230400, 371200, 652300, 512000, 370700, 652800, 511500, 460300, 341000, 140300, 430600, 520200, 340500, 430100, 110100, 451100, 532500, 370200, 131100, 220700, 511000, 420900, 510500, 621100, 130600, 441900, 220200, 361000, 450600, 360500, 620600, 411700, 659000, 450100, 130100, 330800, 330300, 211000, 522300, 441400, 440900, 411200, 210500, 321100, 150600, 410700, 530500, 620100, 542300, 350800, 150100, 440400, 350300, 231000, 320600, 610900, 410200, 320100, 371300, 533100, 341600, 140900, 431200, 230500, 341100, 610400, 430700, 520300, 640100, 652900, 532600, 140400, 370800, 511600, 810100, 370300, 511100, 340600, 430200, 340100, 220800, 451200, 361100, 152200, 450700, 130700, 421000, 220300, 510600, 330900, 420500, 510100, 620700, 442000, 130200, 621200, 441500, 360600, 450200, 211100, 530600, 360100, 620200, 411300, 330400, 522400, 445100, 210600, 150700, 350900, 611000, 440500, 321200, 410800, 210100, 513200, 320700, 654000, 150200, 410300, 530100, 632500, 231100, 341700, 640200, 653000, 431300, 222400, 350400, 542400, 141000, 230600, 320200, 371400, 610500, 370900, 511700, 810200, 341200, 140500, 430800, 230100, 520400, 340700, 430300, 451300, 370400, 421100, 510700, 340200, 130800, 220400, 442101, 450800, 360700, 450300, 130300, 331000, 420600, 232700, 330500, 420100, 211200, 530700, 620300, 441600, 620800, 360200, 411400, 210700, 321300, 632600, 150800, 410900, 513300, 445200, 210200, 150300, 440600, 350500, 610600, 440100, 231200, 320800, 120100, 640300, 653100, 410400, 320300, 371500, 542500, 341800, 632100, 141100, 230700, 810300, 341300, 430900, 140600, 230200, 533300, 371000, 610100, 622900, 511800, 370500, 511300, 460100, 532300, 340800, 140100, 152900, 430400, 532800, 340300, 652100, 451400, 310100, 450900, 130900, 421200, 220500, 510800, 331100, 420700, 510300, 630100, 130400, 441700, 360800, 450400, 211300, 360300, 411500, 330600, 620900, 420200, 522600, 330100, 654200, 445300, 210800, 530300, 632700, 150900, 441200, 530800, 620400, 440700, 650100, 411000, 210300, 513400, 320900, 542600, 632200, 150400, 410500, 500100, 610700, 820100, 350600, 440200, 533400, 350100, 610200, 623000, 230800, 320400, 371600, 652700, 422800, 371100, 640400, 653200, 511900, 542100, 140700, 431000, 230300, 652200, 430500, 520100, 140200, 532900, 370600, 511400, 460200, 370100, 421300, 510900, 340400, 152500, 131000, 220600, 451000, 360900, 621000, 450500, 130500, 420800, 220100, 510400, 330700, 420300, 433100, 211400, 522700, 540100, 441800, 650200, 441300, 360400, 654300, 411600, 210900, 411100, 530900, 330200, 620500, 522200, 210400, 820200, 632300, 150500, 440800, 530400, 350700, 632800, 440300, 321000, 410600, 320500, 542200, 371700, 410100, 610300, 230900, 341500, 610800, 431100, 350200, 640500]
+			},
+			"currentAreaEnable": true,
+			"regionData": {
+				"allAreaSold": false,
+				"soldAreas": [320581, 320582, 320583, 320584, 320585, 320586, 320596, 320502, 320503, 320594, 320595, 320508, 320504, 320505, 320506, 320507]
+			},
+			"success": true,
+			"townData": {
+				"allAreaSold": true,
+				"soldAreas": []
+			},
+			"useNewRegionalSales": true
+		},
+		"tradeResult": {
+			"cartEnable": true,
+			"cartType": 2,
+			"miniTmallCartEnable": true,
+			"startTime": 1544887830000,
+			"success": true,
+			"tradeEnable": true,
+			"tradeType": 2
+		},
+		"userInfoDO": {
+			"activeStatus": 0,
+			"companyPurchaseUser": false,
+			"loginMember": false,
+			"loginUserType": "buyer",
+			"success": true,
+			"userId": 0
+		}
+	},
+	"isSuccess": true
+}
+
+
+{"valItemInfo":{"skuList":[{"names":"浅灰色 ","pvs":"1627207:28332","skuId":"78853071220"},{"names":"浅绿色 ","pvs":"1627207:30156","skuId":"78853071221"},{"names":"深灰色 ","pvs":"1627207:3232478","skuId":"78853071224"},{"names":"深紫色 ","pvs":"1627207:3232479","skuId":"78853071225"},{"names":"深蓝色 ","pvs":"1627207:28340","skuId":"78853071226"},{"names":"白色 ","pvs":"1627207:28320","skuId":"78853071227"},{"names":"粉红色 ","pvs":"1627207:3232480","skuId":"78853071228"},{"names":"紫罗兰 ","pvs":"1627207:80882","skuId":"78853071229"},{"names":"紫色 ","pvs":"1627207:28329","skuId":"90907900858"},{"names":"红色 ","pvs":"1627207:28326","skuId":"90907900857"},{"names":"浅黄色 ","pvs":"1627207:60092","skuId":"3551828771706"},{"names":"深卡其布色 ","pvs":"1627207:3232482","skuId":"3551828771705"},{"names":"绿色 ","pvs":"1627207:28335","skuId":"3551828771704"},{"names":"花色 ","pvs":"1627207:130164","skuId":"3551828771703"},{"names":"军绿色 ","pvs":"1627207:3232483","skuId":"3387032580384"},{"names":"天蓝色 ","pvs":"1627207:3232484","skuId":"3387589913780"},{"names":"酒红色 ","pvs":"1627207:28327","skuId":"3596412711876"},{"names":"黄色 ","pvs":"1627207:28324","skuId":"3596412711875"},{"names":"巧克力色 ","pvs":"1627207:3232481","skuId":"3897519472453"},{"names":"桔色 ","pvs":"1627207:90554","skuId":"3897519472454"},{"names":"蓝色 ","pvs":"1627207:28338","skuId":"3897519472452"},{"names":"褐色 ","pvs":"1627207:132069","skuId":"3897519472451"},{"names":"透明 ","pvs":"1627207:107121","skuId":"3897519472450"},{"names":"黑色 ","pvs":"1627207:28341","skuId":"3898220812594"}],"defSelected":[],"skuMap":{";1627207:28335;":{"priceCent":18800,"price":"188.00","stock":393,"skuId":"3551828771704"},";1627207:28324;":{"priceCent":18800,"price":"188.00","stock":0,"skuId":"3596412711875"},";1627207:28326;":{"priceCent":18800,"price":"188.00","stock":441,"skuId":"90907900857"},";1627207:28341;":{"priceCent":18800,"price":"188.00","stock":476,"skuId":"3898220812594"},";1627207:28320;":{"priceCent":18800,"price":"188.00","stock":486,"skuId":"78853071227"},";1627207:80882;":{"priceCent":18800,"price":"188.00","stock":981,"skuId":"78853071229"},";1627207:28332;":{"priceCent":18800,"price":"188.00","stock":0,"skuId":"78853071220"},";1627207:60092;":{"priceCent":18800,"price":"188.00","stock":461,"skuId":"3551828771706"},";1627207:3232479;":{"priceCent":18800,"price":"188.00","stock":886,"skuId":"78853071225"},";1627207:3232478;":{"priceCent":18800,"price":"188.00","stock":161,"skuId":"78853071224"},";1627207:28340;":{"priceCent":18800,"price":"188.00","stock":955,"skuId":"78853071226"},";1627207:132069;":{"priceCent":18800,"price":"188.00","stock":482,"skuId":"3897519472451"},";1627207:3232484;":{"priceCent":18800,"price":"188.00","stock":424,"skuId":"3387589913780"},";1627207:3232482;":{"priceCent":18800,"price":"188.00","stock":154,"skuId":"3551828771705"},";1627207:3232483;":{"priceCent":18800,"price":"188.00","stock":237,"skuId":"3387032580384"},";1627207:90554;":{"priceCent":18800,"price":"188.00","stock":468,"skuId":"3897519472454"},";1627207:3232480;":{"priceCent":18800,"price":"188.00","stock":2454,"skuId":"78853071228"},";1627207:3232481;":{"priceCent":18800,"price":"188.00","stock":496,"skuId":"3897519472453"},";1627207:130164;":{"priceCent":18800,"price":"188.00","stock":475,"skuId":"3551828771703"},";1627207:30156;":{"priceCent":18800,"price":"188.00","stock":372,"skuId":"78853071221"},";1627207:107121;":{"priceCent":18800,"price":"188.00","stock":466,"skuId":"3897519472450"},";1627207:28327;":{"priceCent":18800,"price":"188.00","stock":495,"skuId":"3596412711876"},";1627207:28338;":{"priceCent":18800,"price":"188.00","stock":374,"skuId":"3897519472452"},";1627207:28329;":{"priceCent":18800,"price":"188.00","stock":0,"skuId":"90907900858"}},"salesProp":{}},"valLoginIndicator":"//buy.taobao.com/auction/buy.htm?from=itemDetail&id=42920935970","isShowSizeRecommend":false,"isDoubleElevenItem":true,"isHouseholdService":false,"isSevenDaysRefundment":true,"apiBidCount":"//tbskip.taobao.com/json/show_bid_count.htm?itemNumId=42920935970&old_quantity=1351&date=1545186501000","valTimeLeft":503107,"standingDate":0,"tradeParams":{},"api":{"descUrl":"//dsc.taobaocdn.com/i1/421/201/42920935970/TB1kNBTRFXXXXaxXVXX8qtpFXlX.desc%7Cvar%5Edesc%3Bsign%5Eff8dc1f00795f84d69d30b60cc6a8186%3Blang%5Egbk%3Bt%5E1542443060","httpsDescUrl":"//desc.alicdn.com/i1/421/201/42920935970/TB1kNBTRFXXXXaxXVXX8qtpFXlX.desc%7Cvar%5Edesc%3Bsign%5Eff8dc1f00795f84d69d30b60cc6a8186%3Blang%5Egbk%3Bt%5E1542443060","fetchDcUrl":"//hdc1.alicdn.com/asyn.htm?pageId=948377638&userId=2347485637"},"tag":{"isShowMeiliXinde":false,"isMedical":false,"isRightRecommend":true,"isShowEcityIcon":false,"isShowYuanchuanIcon":false,"isBrandAttr":true,"isShowTryReport":false,"isAsynDesc":true,"isBrandSiteRightColumn":true,"isShowHouseIcon":false},"isService":false,"isTripUser":false,"cmCatId":"0","cartEnable":true,"renderSystemServer":"//render.taobao.com","isWTContract":false,"isOnlyInMobile":false,"isAreaSell":false,"isMultiPoint":false,"isShowSizeHelper":false,"isMeiz":false,"newSelectCityApi":"//mdskip.taobao.com/json/detailSelectCity.do?isAreaSell=false&itemId=42920935970","initCspuExtraApi":"//ext-mdskip.taobao.com/extension/initCspuExtra.htm","detail":{"isMemberShopItem":false,"isBundleItem":false,"canEditInItemDet":true,"isAllowReport":true,"isHiddenShopAction":false,"isDownShelf":false,"is0YuanBuy":false,"isCarService":false,"isShowEcityBasicSign":false,"isItemAllowSellerView":true,"goNewAuctionFlow":false,"isShowEcityVerticalSign":false,"reviewListType":1,"isVaccine":false,"isHasPos":false,"recommendBigMarkDownEndTime":"1477880000000","isAutoYushou":false,"isOnePriceCar":false,"isVitual3C":false,"isFullCarSell":false,"isHideAttentionBtn":false,"isNABundleItem":false,"double11StartTime":"","showDiscountRecommend":false,"enableAliMedicalComponent":true,"isOtcDrug":false,"isYYZY":false,"mlhNewDesc":false,"isMainLiaoSku":false,"isHkMilk":false,"isEnableAppleSku":true,"isHkItem":false,"isShowContentModuleTitle":false,"isRx2Count":false,"isHiddenNonBuyprice":false,"isH5NewLogin":true,"isHkO2OItem":false,"isSavingEnergy":false,"showFushiPoiInfo":false,"defaultItemPrice":"188.00","globalSellItem":false,"isShowEcityDesc":false,"isSkuColorShow":false,"autoccUser":false,"isMenDianInventroy":false,"isMeilihui":false,"isLadderGroupon":false,"isHidePoi":false,"isNewAttraction":true,"isPreSellBrand":false,"loginBeforeCart":false,"isAutoFinancing":false,"showSuperMarketBuy":false,"isPrescriptionDrug":false,"isHasQualification":false,"recommendBigMarkDownStartTime":"1478793600000","pageType":"default","isIFCShop":false,"isAlicomMasterCard":false,"isCarCascade":false,"isDianQiMeiJia":false,"isSkuMemorized":false,"addressLevel":2,"isRx2":false,"isTeMai":false,"allowRate":true,"isShowPreClosed":false,"isO2OStaging":false,"isPurchaseMallVipBuyer":false,"cdn75":false,"isNewMedical":false,"isCarYuEBao":false,"isCyclePurchase":false,"isAliTelecomNew":false,"show9sVideo":true,"isHkDirectSale":false,"isTspace":false,"tryReportDisable":false,"isB2Byao":false,"isRegionLevel":false,"isContractPhoneItem":false,"isYY":false,"supermarketAndQianggou":false,"isZhengChe":false,"isDianZiMendian":false,"isNextDayService":false,"timeKillAuction":false},"apiAddCart":"//cart.taobao.com/add_cart_item.htm?item_id=42920935970","apiBeans":"//count.taobao.com/counter3?keys=SM_368_dsr-2347485637,ICCP_1_42920935970","idsMod":[],"initApi":"//mdskip.taobao.com/core/initItemDetail.htm?isUseInventoryCenter=false&cartEnable=true&service3C=false&isApparel=false&isSecKill=false&tmallBuySupport=true&isAreaSell=false&tryBeforeBuy=false&offlineShop=false&itemId=42920935970&showShopProm=false&isPurchaseMallPage=false&itemGmtModified=1545285259000&isRegionLevel=false&household=false&sellerPreview=false&queryMemberRight=true&addressLevel=2&isForbidBuyItem=false","valPointTimes":1.0,"changeLocationApi":"//mdskip.taobao.com/core/changeLocation.htm?isUseInventoryCenter=false&itemTags=385,587,843,907,1035,1163,1478,1483,1675,1803,1995,2049,2059,2443,2507,2635,3974,4166,4491,4550,4614,4678,4811,5895,6283,6603,7371,7947,8326,11083,11339,11723,15554,17035,25282,28353,28866,29250,29889,30273,30337,30977,33793,36417,37569,40897,51329,51585,51969,56130,57026,59010,65281,66241,67521,74369,74561,82306,84673,87170,89665,94145,101761,101762,103489,103681,108225,112386,119234,119298,120962,139778,150146,166402,166658,175490,243906,249858,257794,257922,262018,272194,281666,299202,299458,340034,340098,340162,340354,347074&cartEnable=true&sellerUserTag3=144185556822179968&service3C=false&sellerUserTag2=18014536485306376&isSecKill=false&isAreaSell=false&sellerUserTag4=1152921508903929219&offlineShop=false&itemId=42920935970&sellerUserTag=38866976&showShopProm=false&tgTag=false&isPurchaseMallPage=false&isRegionLevel=false&household=false&notAllowOriginPrice=false&addressLevel=2","isTmallComboSupport":false,"serviceIconList":[{"description":"该商品加入了“公益宝贝”计划","tagLink":"//service.taobao.com/support/main/help_quick.htm?q=%25E4%25BB%2580%25E4%25B9%2588%25E6%2598%25AF%25E5%2585%25AC%25E7%259B%258A%25E5%25AE%259D%25E8%25B4%259D%25EF%25BC%259F","tagImage":"//img.alicdn.com/tps/i4/T18aVfFI0dXXcsE9Te-40-42.png"}],"valPointRate":0.5,"tradeType":2,"valMode":128,"initExtraApi":"//ext-mdskip.taobao.com/extension/initExtra.htm","itemDO":{"isInRepository":false,"isSupportTryBeforeBuy":false,"reservePrice":"188.00","isSecondKillFromMobile":false,"cspuCategorySwitch":false,"isOnline":true,"title":"巴拉拉小魔仙小学生书包1-3-6年级女童儿童卡通双肩背包6-12周岁","isEnterprisePath":false,"showCompanyPurchase":false,"isDcAsyn":true,"feature":"1","attachImgUrl":["//img.alicdn.com/imgextra/i1/2347485637/TB2OjKOtpXXXXbiXXXXXXXXXXXX_!!2347485637.jpg"],"isElecCouponItem":false,"brandSiteId":"0","brandSpecialSold":"false","sellerNickName":"%E9%BA%A6%E7%A7%91%E5%A8%81%E6%AF%8D%E5%A9%B4%E4%B8%93%E8%90%A5%E5%BA%97","isSecondKillFromPC":false,"auctionType":"b","encryptSellerId":"UvCv0MGQ4MFxGMWTT","prov":"广东","brand":"巴拉拉小魔仙","isDefaultChooseTryBeforeBuy":false,"quantity":12137,"isBidden":false,"hasSku":true,"isNewProGroup":false,"weight":"0","userId":"2347485637","rootCatId":"25","itemId":"42920935970","validatorUrl":"//store.taobao.com/tadget/shop_stats.htm","isCustomizedItem":false,"auctionStatus":"0","isSecondKillFromPCAndWap":false,"brandId":"28610388","sellProgressiveRate":"3_100_1.60;6_0_4.50;9_0_6.00","spuId":"317145291","categoryId":"50012406"},"rateConfig":{"itemId":42920935970,"sellerId":2347485637,"rateScoreCacheDisable":false,"rateSubjectDisable":false,"tryReportDisable":false,"rateScoreDisable":false,"rateEnable":true,"spuId":317145291,"rateNewChartDisable":false,"listType":1,"rateCloudDisable":false},"rstShopId":115628655,"propertyPics":{";1627207:28324;":["//img.alicdn.com/imgextra/i4/2347485637/TB2y_pmanAlyKJjSZPiXXXL2VXa_!!2347485637.jpg"],";1627207:28326;":["//img.alicdn.com/imgextra/i3/2347485637/O1CN012blrhq1rVn6C8fbKu_!!2347485637.jpg"],";1627207:80882;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN010kW4uZ1rVn6DOM2Lk_!!2347485637.jpg"],";1627207:28320;":["//img.alicdn.com/imgextra/i2/2347485637/O1CN01ComLpo1rVn6GSvNHi_!!2347485637.jpg"],";1627207:28332;":["//img.alicdn.com/imgextra/i3/2347485637/O1CN01mkftHl1rVn66HHtIX_!!2347485637.jpg"],";1627207:60092;":["//img.alicdn.com/imgextra/i2/2347485637/O1CN01UabjpU1rVn6ClvR50_!!2347485637.jpg"],";1627207:3232479;":["//img.alicdn.com/imgextra/i4/2347485637/O1CN01jbL3na1rVn6EN0rJH_!!2347485637.jpg"],";1627207:28340;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN0172veQ21rVn6EZlhoL_!!2347485637.jpg"],";1627207:132069;":["//img.alicdn.com/imgextra/i2/2347485637/O1CN01SapOly1rVn6CVZhHB_!!2347485637.jpg"],";1627207:3232483;":["//img.alicdn.com/imgextra/i4/2347485637/TB2djuSvSFmpuFjSZFrXXayOXXa_!!2347485637.jpg"],"default":["//img.alicdn.com/imgextra/i3/2347485637/TB1Qv.YSFXXXXbPaXXXXXXXXXXX_!!0-item_pic.jpg","//img.alicdn.com/imgextra/i2/TB1WgqyHVXXXXbBXpXXXXXXXXXX_!!0-item_pic.jpg","//img.alicdn.com/imgextra/i4/2347485637/TB2XpZUvS8mpuFjSZFMXXaxpVXa_!!2347485637.jpg","//img.alicdn.com/imgextra/i2/TB1w0y5JFXXXXXkXFXXXXXXXXXX_!!0-item_pic.jpg","//img.alicdn.com/imgextra/i3/TB1_CaaJVXXXXbpXFXXXXXXXXXX_!!0-item_pic.jpg"],";1627207:3232481;":["//img.alicdn.com/imgextra/i2/2347485637/O1CN01xS7bmD1rVn6BaHGvP_!!2347485637.jpg"],";1627207:130164;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN01nUKcmw1rVn6F7Lsbl_!!2347485637.jpg"],";1627207:107121;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN01lg2vXJ1rVn6ENOYgf_!!2347485637.jpg"],";1627207:28338;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN0199eTFJ1rVn6CVYQK5_!!2347485637.jpg"],";1627207:28335;":["//img.alicdn.com/imgextra/i3/2347485637/TB29cGrsgxlpuFjy0FoXXa.lXXa_!!2347485637.jpg"],";1627207:28341;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN01n7wlDX1rVn6EwXo0y_!!2347485637.jpg"],";1627207:3232478;":["//img.alicdn.com/imgextra/i4/2347485637/O1CN01qaZIAT1rVn6EMz2zI_!!2347485637.jpg"],";1627207:3232484;":["//img.alicdn.com/imgextra/i2/2347485637/TB2UsGGvUhnpuFjSZFEXXX0PFXa_!!2347485637.jpg"],";1627207:3232482;":["//img.alicdn.com/imgextra/i3/2347485637/O1CN01NyR0tj1rVn6Df2tD4_!!2347485637.jpg"],";1627207:90554;":["//img.alicdn.com/imgextra/i3/2347485637/O1CN01z5I9Ow1rVn6CifpD3_!!2347485637.jpg"],";1627207:3232480;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN01UaLAZB1rVn6AZEMYZ_!!2347485637.jpg"],";1627207:30156;":["//img.alicdn.com/imgextra/i2/2347485637/O1CN012Eqz0Y1rVn6BZsECF_!!2347485637.jpg"],";1627207:28327;":["//img.alicdn.com/imgextra/i1/2347485637/O1CN01mWjmAf1rVn6DOnllR_!!2347485637.jpg"],";1627207:28329;":["//img.alicdn.com/imgextra/i2/2347485637/TB2nEPWbVXXXXaxXpXXXXXXXXXX_!!2347485637.jpg"]},"tmallRateType":0,"selectRegionApi":"//mdskip.taobao.com/core/selectRegion.do?isAreaSell=false&itemId=42920935970","apiItemViews":"//count.taobao.com/counter2?keys=ICVT_7_42920935970&inc=ICVT_7_42920935970&sign=3675ab08d9f5571f0731c778fc0299fce8a","tagsId":"385,587,843,907,1035,1163,1478,1483,1675,1803,1995,2049,2059,2443,2507,2635,3974,4166,4491,4550,4614,4678,4811,5895,6283,6603,7371,7947,8326,11083,11339,11723,15554,17035,25282,28353,28866,29250,29889,30273,30337,30977,33793,36417,37569,40897,51329,51585,51969,56130,57026,59010,65281,66241,67521,74369,74561,82306,84673,87170,89665,94145,101761,101762,103489,103681,108225,112386,119234,119298,120962,139778,150146,166402,166658,175490,243906,249858,257794,257922,262018,272194,281666,299202,299458,340034,340098,340162,340354,347074","url":{"tbskip":"//tbskip.taobao.com","mdskip":"//mdskip.taobao.com","tradeForOldTmallBuy":"//stay.buy.tmall.com/order/confirm_order.htm","tgDetailDomain":"//detail.ju.taobao.com","detailServer":"//detail.taobao.com","buyBase":"//buy.taobao.com/auction","mallList":"//list.tmall.com","extMdskip":"//ext-mdskip.taobao.com","xCrossServer":"//mdetail.tmall.com","tgDomain":"//ju.taobao.com","rate":"//rate.tmall.com","tradeBaseUrl":"//trade.taobao.com/trade","topUploadServerBaseUrl":"//upload.taobao.com","BIDRedirectionitemDomain":"//paimai.taobao.com"},"tradeConfig":{"1":"//buy.taobao.com/auction/buy_now.jhtml","2":"//buy.tmall.com/order/confirm_order.htm","3":"//obuy.tmall.com/home/order/confirm_order.htm","4":"","7":"//tw.taobao.com/buy/auction/buy_now.jhtml"},"valCartInfo":{"itemId":"42920935970","cartUrl":"//cart.taobao.com/my_cart.htm?from=bdetail","statsUrl":"//go.mmstat.com/1.gif?logtype=2&category=cart_{loc}_50012406"},"valFlashUrl":"//players.youku.com/player.php/partnerid/XMTI=/sid/XODQ5MjkwMTUy/v.swf","isAliTripHK":false,"selectCityApi":"//mdskip.taobao.com/core/selectCity.htm?isAreaSell=false&itemId=42920935970","getProgressiveInfoApi":"//mdskip.taobao.com/core/getProgressiveInfo.do?platform_type=b2c&fromTryBeforeBuy=false&sellerId=2347485637&platform=tmall&category=50012406&sellerPercent=3_100_1.60;6_0_4.50;9_0_6.00"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
 	"valItemInfo": {
 		"skuList": [{

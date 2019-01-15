@@ -41,7 +41,10 @@ class Taobao():
 
 	def get_taobao_page(self, url):
 		'''获取淘宝商品页面解析信息'''
-		r = requests.get(url)
+		try:
+			r = requests.get(url, timeout = 10)
+		except:
+			return 0
 		soup = BeautifulSoup(r.text, "lxml")
 		print("成功获取淘宝商品页面信息")
 		return soup
@@ -67,6 +70,67 @@ class Taobao():
 			break
 		return first_size_key
 
+	def get_taobao_sku_first_dl(self, soup):
+		'''获取淘宝SKU表第一列信息'''
+		tag = soup.find_all("div", class_="tb-sku")
+		first_dl = tag[0].dl
+		return first_dl
+		
+	def get_taobao_product_size(self, dl):
+		'''获取淘宝尺码信息'''
+		taobao_sizes = {}
+		taobao_size_list = []
+		size_key_list = []
+		li_list = dl.find_all("li")
+		
+		for i in range(0, len(li_list)):
+			attr = li_list[i].attrs
+			size_key = attr['data-value']
+			size_key_list.append(size_key)
+		
+		for string in dl.stripped_strings:
+			taobao_size_list.append(eval(repr(string.replace(' ',''))))
+		taobao_size_list.pop(0)
+		
+		for i in range(0, len(size_key_list)):
+			taobao_sizes[size_key_list[i]] = taobao_size_list[i].replace(' ','')
+		
+		print("成功获取淘宝尺码信息：")
+		print(taobao_sizes)
+		print(taobao_size_list)
+		print(size_key_list)
+		return taobao_sizes
+		
+	def get_taobao_product_color(self, next_dl):
+		"""获取淘宝颜色信息"""
+		taobao_colors = {}
+		dl = next_dl.find_all("li")
+		
+		for i in range(0, len(dl)):
+			attr = dl[i].attrs
+			color_key = attr['data-value']
+			color_title = attr['title']
+			taobao_colors[color_key] = color_title.replace(' ','')
+		
+		print("成功获取淘宝颜色信息：")
+		print(taobao_colors)
+		return taobao_colors
+		
+	def get_taobao_product_image(self, next_dl):
+		'''获取淘宝照片信息'''
+		taobao_images = []
+		p1 = re.compile(r'[(](.*?)[)]', re.S)
+		for sib in next_dl.find_all(re.compile("^a")):
+			str_image = sib['style']
+			image_url = re.findall(p1, str_image)
+			str_image = image_url[0]
+			image_url = "http:" + str_image[:-13]
+			taobao_images.append(image_url)	
+		print("成功获取淘宝照片信息：")	
+		print(taobao_images)
+		return taobao_images		
+
+		
 	def get_current_dir(self):
 		current_dir = os.path.abspath(os.curdir)
 		return current_dir

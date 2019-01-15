@@ -155,9 +155,6 @@ class Suning():
 		price = browser.find_element_by_css_selector(css_selector).get_attribute("value")
 		return price
 
-	def get_suning_product_kucun(self):
-		""" 获取苏宁商品库存 """
-		return 200
 
 	def add_suning_product_color(self, browser, add_color):
 		''' 添加苏宁商品颜色 '''
