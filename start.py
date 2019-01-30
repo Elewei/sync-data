@@ -117,7 +117,7 @@ for i in range(len(data)):
 				print("获取淘宝商品数据失败\n")
 				taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
 				failed_data_count += 1	
-				continue;
+				break;
 			
 			# 获取淘宝data数据
 			product_json = taobao.get_taobao_product_json_data(soup)
@@ -136,12 +136,22 @@ for i in range(len(data)):
 				break
 
 			#处理setMdskip_json数据
-			setMdskip_data = json.loads(setMdskip_json)
+			try:
+				setMdskip_data = json.loads(setMdskip_json)
+			except:
+				print("加载 json 淘宝数据出错\n")
+				break
+			
 			priceInfo = setMdskip_data['defaultModel']['itemPriceResultDO']['priceInfo']
 			skuQuantity = setMdskip_data['defaultModel']['inventoryDO']['skuQuantity']
 
 			# 处理product_json数据
-			json_data = json.loads(product_json)
+			try:
+				json_data = json.loads(product_json)
+			except:
+				print("加载 json 淘宝数据出错\n")
+				break
+			
 			skuList = json_data['valItemInfo']['skuList']
 			skuMap = json_data['valItemInfo']['skuMap']
 			#propertyPics = json_data['propertyPics']
@@ -291,12 +301,17 @@ for i in range(len(data)):
 
 				# 延迟80s，等待登录
 				suning.delay_time( 80 )
-			else:
+			#else:
 				# 延迟2s，等待页面加载
-				suning.delay_time( 2 )
+				# suning.delay_time( 2 )
 			
-			# 跳转到苏宁编辑商品链接
-			browser.get(suning_product_url)
+			try:
+				# 跳转到苏宁编辑商品链接
+				browser.get(suning_product_url)
+			
+			except:
+				print("苏宁页面跳转失败\n")
+				break
 
 			# 延迟3s，等待页面加载
 			suning.delay_time( 3 )
@@ -397,4 +412,4 @@ for i in range(len(data)):
 			if failed_data_count >= 1000:
 				print("错误超过10个，结束，请联系启卫\n")
 				break;
-			continue
+			break
