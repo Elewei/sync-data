@@ -23,6 +23,7 @@
 10. pyInstaller
 11. Pillow 图片库
 	pip install Pillow
+	
 """
 
 import re
@@ -91,6 +92,7 @@ for i in range(len(data)):
 	for suning_productCode, taobao_id in data[i].items():
 		sync_failed_data = {}
 		try:	
+		
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
 			
@@ -364,7 +366,7 @@ for i in range(len(data)):
 						out = rgb_im.resize((int(x_s),y_s),Image.ANTIALIAS)
 						out.save(image_path)
 				add_color[color] = image_path
-
+			
 			for color in add_color_remove:
 				del add_color[color]
 			
@@ -386,7 +388,22 @@ for i in range(len(data)):
 				suning.upload_suning_product_image(browser, add_color, suning_products['size'][0], upload_image_seconds)
 			elif len(suning_products['color']) != 0:
 				suning.upload_suning_product_image_no_size(browser, add_color, upload_image_seconds)
-				
+
+			current_dir = taobao.get_current_dir()
+			taobao_img_url = taobao_image_url_list[0]
+			image_path = current_dir + "\img\\" + "toutu.png"
+			taobao.download_taobao_image(taobao_img_url, image_path)
+			
+			taobao_image = Image.open(image_path)
+			size = 800, 800
+			rgb_taobao_image = taobao_image.convert('RGB')
+			out = rgb_taobao_image.resize(size,Image.ANTIALIAS)
+			out.save(image_path)
+			
+			#background_path = current_dir + "\\" + "background.png"
+			#img_path = suning.process_background_img(background_path, image_path, current_dir)
+			suning.upload_suning_product_background_img(browser, image_path)
+			
 			# 延迟2s，等待登录
 			suning.delay_time( 2 )
 
@@ -405,7 +422,7 @@ for i in range(len(data)):
 
 			# 返回首页
 			#browser.get("https://sop.suning.com/sel/tradeCenter/showMainTradeCenter.action")
-		
+			
 		except:
 			taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
 			failed_data_count += 1

@@ -1,4 +1,5 @@
 import time
+from PIL import Image
 from selenium import webdriver
 from pykeyboard import PyKeyboard
 from selenium.webdriver.common.keys import Keys
@@ -226,6 +227,44 @@ class Suning():
 				print("重新开始上传...")
 			time.sleep(seconds)
 			print("颜色：" + color + "照片: " + image_path + " 上传成功")
+		return
+
+	def process_background_img(self, background_path, img_path, current_dir):
+		''' 处理背景照片信息 '''
+		background = Image.open(background_path)
+		background = background.convert('RGBA')
+		
+		img = Image.open(img_path)
+		img = img.convert('RGBA')
+		
+		out_img = Image.blend(background, img,0.5)
+		image_path = current_dir + "\img\\" + "background.png"
+		out_img.save(image_path)
+		return image_path
+		
+		
+	def upload_suning_product_background_img(self, browser, img_path):
+		''' 上传苏宁背景照片信息 '''
+
+		pyk = PyKeyboard()
+		css_selector = "tr>td.laign>div>div.adoptm>ul.propic>li.ywxpic>div#file_transparent_upload1>a.uploadfive-button"
+		ele = browser.find_element_by_css_selector(css_selector)
+		ele.location_once_scrolled_into_view
+		ele.click()
+		time.sleep(2)
+		pyk.type_string(img_path)
+		time.sleep(2)
+		try:
+			pyk.tap_key(pyk.enter_key)
+		except:
+			pyk.press_key(pyk.alt_key)
+			pyk.tap_key(pyk.function_keys[4])
+			pyk.release_key(pyk.alt_key)
+			upload_suning_product_background_img(self, browser)
+			print(" 背景图片上传失败")
+			print("重新开始上传...")
+		time.sleep(seconds)
+		print("背景上传成功")
 		return
 		
 	def delete_suning_product_color(self):
