@@ -1,4 +1,5 @@
 import time
+import random
 from PIL import Image
 from selenium import webdriver
 from pykeyboard import PyKeyboard
@@ -181,6 +182,20 @@ class Suning():
 				return
 		return
 
+	def add_suning_product_highlight(self, browser):
+		''' 添加苏宁商品亮点 '''
+		highlightWord = ["时尚休闲", "靓丽气质", "大气时尚", "气质", "时尚百搭", "通勤日常", "显身材", "提高气质", "大方得体", "休闲百搭", "通勤", "居家日常", "舒适", "合身", "得体", "大方", "日常搭配", "百搭", "青春气息", "休闲"]
+		browser.find_element_by_id("highlightWord1").clear()
+		browser.find_element_by_id("highlightWord1").send_keys(random.choice(highlightWord))
+		browser.find_element_by_id("highlightWord2").clear()
+		browser.find_element_by_id("highlightWord2").send_keys(random.choice(highlightWord))
+		browser.find_element_by_id("highlightWord3").clear()
+		browser.find_element_by_id("highlightWord3").send_keys(random.choice(highlightWord))
+		browser.find_element_by_id("promd").clear()
+		promd = "全店满99-6，199-20，关注店铺优惠惊喜不断，任何疑问都请联系"
+		browser.find_element_by_id("promd").send_keys(promd)
+		return		
+		
 	def upload_suning_product_image(self, browser, add_color, size, upload_image_seconds):
 		''' 上传苏宁商品照片 '''
 		for color, image_path in add_color.items():

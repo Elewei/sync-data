@@ -404,6 +404,9 @@ for i in range(len(data)):
 			#img_path = suning.process_background_img(background_path, image_path, current_dir)
 			suning.upload_suning_product_background_img(browser, image_path)
 			
+			# 上传文字
+			suning.add_suning_product_highlight(browser)
+			
 			# 延迟2s，等待登录
 			suning.delay_time( 2 )
 
