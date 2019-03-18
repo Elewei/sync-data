@@ -2,6 +2,8 @@ import re
 import requests
 import shutil
 import os
+import requests.packages.urllib3.util.ssl_
+requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS = 'ALL'
 from bs4 import BeautifulSoup
 
 class Taobao():
@@ -34,6 +36,7 @@ class Taobao():
 	def get_taobao_setmdskip_data(self, url, headers):
 		rs=requests.get(url,headers=headers, verify=False)
 		data = rs.text
+		print(data)
 		p1 = re.compile(r'[(](.*?)[)]', re.S)
 		brackets_content = re.findall(p1, data)
 		json_data = brackets_content[0]
