@@ -76,15 +76,17 @@ class Taobao():
 	def get_taobao_sku_first_dl(self, soup):
 		'''获取淘宝SKU表第一列信息'''
 		tag = soup.find_all("div", class_="tb-sku")
-		first_dl = tag[0].dl
-		return first_dl
+		if len(tag) != 0:
+			first_dl = tag[0].dl
+			return first_dl
 		
 	def get_taobao_product_size(self, dl):
 		'''获取淘宝尺码信息'''
 		taobao_sizes = {}
 		taobao_size_list = []
 		size_key_list = []
-		li_list = dl.find_all("li")
+		li_list = dl.find_all("li")                                                
+		list_str_remove = ['真品', '正品', '蚕', '皮', '专利', '专柜', '丝', '纯', '天然', '品牌', '进口', '羊皮', '牛皮', '最', '金牌', '独家', '100%', '原单', '折', '元']
 		
 		for i in range(0, len(li_list)):
 			attr = li_list[i].attrs
@@ -92,7 +94,13 @@ class Taobao():
 			size_key_list.append(size_key)
 		
 		for string in dl.stripped_strings:
-			taobao_size_list.append(eval(repr(string.replace(' ',''))))
+			#taobao_size_list.append(eval(repr(string.replace(' ',''))))
+			string_size = eval(repr(string.replace(' ','')))
+			for i in range(0, len(list_str_remove)):
+				start_loc = string_size.find(list_str_remove[i])
+				len_substr = len(list_str_remove[i])
+				res_str = string_size[:start_loc] + string_size[start_loc + len_substr:]
+			taobao_size_list.append(res_str)
 		taobao_size_list.pop(0)
 		
 		for i in range(0, len(size_key_list)):
