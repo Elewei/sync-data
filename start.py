@@ -28,6 +28,7 @@
 
 import re
 import json
+import os
 import configparser
 from PIL import Image
 from taobao import Taobao
@@ -91,8 +92,12 @@ for i in range(len(data)):
 	# 对单个商品信息进行处理
 	for suning_productCode, taobao_id in data[i].items():
 		sync_failed_data = {}
-		try:	
-	
+		try:
+			# 每次启动时，启动3次关闭窗口程序
+			k = 0
+			for k in range(3):
+				os.system('close.exe')
+			
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
 			
