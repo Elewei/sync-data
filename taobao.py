@@ -118,6 +118,8 @@ class Taobao():
 		dl = next_dl.find_all("li")
 		
 		for i in range(0, len(dl)):
+			if i > 15:
+				break
 			attr = dl[i].attrs
 			color_key = attr['data-value']
 			color_title = attr['title']

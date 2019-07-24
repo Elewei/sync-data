@@ -30,6 +30,7 @@ import re
 import json
 import os
 import configparser
+import time
 from PIL import Image
 from taobao import Taobao
 from suning import Suning
@@ -86,17 +87,26 @@ print("成功清除失败文件")
 
 
 failed_data_count = 0
+failed_404_times = 0
 
 # 循环查找data中所有条目
 for i in range(len(data)):
 	# 对单个商品信息进行处理
 	for suning_productCode, taobao_id in data[i].items():
 		sync_failed_data = {}
+		
+		if failed_404_times > 5:
+			print("页面出现404错误，延迟5分钟")
+			suning.delay_time( 180 )
+			failed_404_times = 0
+			
 		try:
 			# 每次启动时，启动3次关闭窗口程序
 			k = 0
 			for k in range(3):
 				os.system('close.exe')
+			
+			start = time.clock()
 			
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
@@ -154,6 +164,9 @@ for i in range(len(data)):
 				skuQuantity = setMdskip_data['defaultModel']['inventoryDO']['skuQuantity']
 			except:
 				print("获取setMdskip 数据出错")
+				taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
+				failed_data_count += 1
+				suning.delay_time( 15 * 60 )
 				break
 			
 			# 处理product_json数据
@@ -161,6 +174,8 @@ for i in range(len(data)):
 				json_data = json.loads(product_json)
 			except:
 				print("加载 json 淘宝数据出错\n")
+				taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
+				failed_data_count += 1	
 				break
 			
 			skuList = json_data['valItemInfo']['skuList']
@@ -322,6 +337,7 @@ for i in range(len(data)):
 			
 			except:
 				print("苏宁页面跳转失败\n")
+				taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
 				break
 
 			# 延迟3s，等待页面加载
@@ -383,14 +399,18 @@ for i in range(len(data)):
 			print(add_color)
 
 			# 添加苏宁商品颜色
-			suning.add_suning_product_color(browser, add_color)
-
+			ret = suning.add_suning_product_color(browser, add_color)
+			if (ret != 0):
+				print("苏宁页面跳转失败\n")
+				taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
+				failed_404_times = failed_404_times + 1
+				break				
+			
 			# 添加苏宁商品尺码
 			suning.add_suning_product_size(browser, add_size)
 
 			# 填写商品价格与库存
-			suning.add_suning_product_sku(browser, add_color, suning_products['size'], add_size, suning_products['color'],
-											taobao_products, taobao_colors, taobao_sizes)
+			suning.add_suning_product_sku(browser, add_color, suning_products['size'], add_size, suning_products['color'],taobao_products, taobao_colors, taobao_sizes)
 
 			# 上传苏宁颜色照片
 			if len(suning_products['color']) != 0 and len(suning_products['size']) != 0:
@@ -421,7 +441,9 @@ for i in range(len(data)):
 
 			# 点击上传保存
 			browser.find_element_by_id("saveOrUpdateBtn").click()
-				
+
+			
+			
 			# 延迟5s，等待保存
 			suning.delay_time( 5 )
 

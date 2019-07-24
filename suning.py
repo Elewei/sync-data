@@ -167,8 +167,8 @@ class Suning():
 				browser.find_element_by_css_selector(css_selector_add_color).send_keys(color)
 				browser.find_element_by_css_selector(css_selector_color_click).click()
 			except:
-				return
-		return
+				return -1
+		return 0
 
 	def add_suning_product_size(self, browser, add_size):
 		''' 添加苏宁商品尺码 '''
@@ -204,7 +204,7 @@ class Suning():
 			ele = browser.find_element_by_css_selector(css_selector)
 			ele.location_once_scrolled_into_view
 			ele.click()
-			time.sleep(2)
+			time.sleep(4)
 			pyk.type_string(image_path)
 			time.sleep(int(upload_image_seconds))
 			try:
