@@ -111,7 +111,7 @@ for i in range(len(data)):
 			# 初始并实例化淘宝商品类
 			taobao = Taobao(taobao_id)
 			
-			# http://item.taobao.com/item.htm?id=
+			# http://item.taobao.com/item.htm?id=584180190359
 			taobao_product_url = taobao.get_taobao_product_url()
 			taobao_mdskip_url = taobao.get_taobao_product_mdskip_url()
 			headers = taobao.get_taobao_product_headers()
@@ -135,7 +135,7 @@ for i in range(len(data)):
 				taobao.failed_data_save("failed_sync_data.txt", suning_productCode, taobao_id)
 				failed_data_count += 1	
 				break;
-			
+
 			# 获取淘宝data数据
 			product_json = taobao.get_taobao_product_json_data(soup)
 			print("打印淘宝商品数据：")

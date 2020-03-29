@@ -55,9 +55,10 @@ class Taobao():
 	def get_taobao_product_json_data(self, soup):
 		'''获取淘宝商品JSON数据'''
 		script_list = soup.find_all('script')
-		script_content = str(script_list[22])
+		script_content = str(script_list[24])
 		p1 = re.compile(r'[(](.*?)[)]', re.S)
 		brackets_content = re.findall(p1, script_content)
+		print(brackets_content)
 		if brackets_content == []:
 			script_content = str(script_list[21])
 			p1 = re.compile(r'[(](.*?)[)]', re.S)
