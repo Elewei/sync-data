@@ -1,0 +1,918 @@
+{
+	"valItemInfo": {
+		"skuList": [
+			{
+				"names": "S 米白色 ",
+				"pvs": "20509:28314;1627207:4266701",
+				"skuId": "4349485295239"
+			},
+			{
+				"names": "M 米白色 ",
+				"pvs": "20509:28315;1627207:4266701",
+				"skuId": "4349485295240"
+			},
+			{
+				"names": "L 米白色 ",
+				"pvs": "20509:28316;1627207:4266701",
+				"skuId": "4349485295241"
+			},
+			{
+				"names": "XL 米白色 ",
+				"pvs": "20509:28317;1627207:4266701",
+				"skuId": "4410833735222"
+			},
+			{
+				"names": "S 黑色 ",
+				"pvs": "20509:28314;1627207:28341",
+				"skuId": "4239830380736"
+			},
+			{
+				"names": "M 黑色 ",
+				"pvs": "20509:28315;1627207:28341",
+				"skuId": "4239830380739"
+			},
+			{
+				"names": "L 黑色 ",
+				"pvs": "20509:28316;1627207:28341",
+				"skuId": "4239830380742"
+			},
+			{
+				"names": "XL 黑色 ",
+				"pvs": "20509:28317;1627207:28341",
+				"skuId": "4239830380745"
+			},
+			{
+				"names": "S 米白色【加厚款】 ",
+				"pvs": "20509:28314;1627207:697778332",
+				"skuId": "4239830380738"
+			},
+			{
+				"names": "M 米白色【加厚款】 ",
+				"pvs": "20509:28315;1627207:697778332",
+				"skuId": "4239830380741"
+			},
+			{
+				"names": "L 米白色【加厚款】 ",
+				"pvs": "20509:28316;1627207:697778332",
+				"skuId": "4239830380744"
+			},
+			{
+				"names": "XL 米白色【加厚款】 ",
+				"pvs": "20509:28317;1627207:697778332",
+				"skuId": "4239830380747"
+			},
+			{
+				"names": "S 黑色【加厚款】 ",
+				"pvs": "20509:28314;1627207:380868563",
+				"skuId": "4239830380737"
+			},
+			{
+				"names": "M 黑色【加厚款】 ",
+				"pvs": "20509:28315;1627207:380868563",
+				"skuId": "4239830380740"
+			},
+			{
+				"names": "L 黑色【加厚款】 ",
+				"pvs": "20509:28316;1627207:380868563",
+				"skuId": "4239830380743"
+			},
+			{
+				"names": "XL 黑色【加厚款】 ",
+				"pvs": "20509:28317;1627207:380868563",
+				"skuId": "4239830380746"
+			},
+			{
+				"names": "S 红色【加厚款】 ",
+				"pvs": "20509:28314;1627207:664610925",
+				"skuId": "4455003410977"
+			},
+			{
+				"names": "M 红色【加厚款】 ",
+				"pvs": "20509:28315;1627207:664610925",
+				"skuId": "4455003410978"
+			},
+			{
+				"names": "L 红色【加厚款】 ",
+				"pvs": "20509:28316;1627207:664610925",
+				"skuId": "4455003410979"
+			},
+			{
+				"names": "XL 红色【加厚款】 ",
+				"pvs": "20509:28317;1627207:664610925",
+				"skuId": "4455003410980"
+			},
+			{
+				"names": "S ML8016米色【加厚款】 ",
+				"pvs": "20509:28314;1627207:7107459736",
+				"skuId": "4302208436320"
+			},
+			{
+				"names": "M ML8016米色【加厚款】 ",
+				"pvs": "20509:28315;1627207:7107459736",
+				"skuId": "4302208436329"
+			},
+			{
+				"names": "L ML8016米色【加厚款】 ",
+				"pvs": "20509:28316;1627207:7107459736",
+				"skuId": "4302208436338"
+			},
+			{
+				"names": "XL ML8016米色【加厚款】 ",
+				"pvs": "20509:28317;1627207:7107459736",
+				"skuId": "4302208436347"
+			},
+			{
+				"names": "S ML8016黑色【加厚款】 ",
+				"pvs": "20509:28314;1627207:7107459737",
+				"skuId": "4302208436321"
+			},
+			{
+				"names": "M ML8016黑色【加厚款】 ",
+				"pvs": "20509:28315;1627207:7107459737",
+				"skuId": "4302208436330"
+			},
+			{
+				"names": "L ML8016黑色【加厚款】 ",
+				"pvs": "20509:28316;1627207:7107459737",
+				"skuId": "4302208436339"
+			},
+			{
+				"names": "XL ML8016黑色【 加厚款】 ",
+				"pvs": "20509:28317;1627207:7107459737",
+				"skuId": "4302208436348"
+			},
+			{
+				"names": "S MT9122K摩卡色【加厚款】 ",
+				"pvs": "20509:28314;1627207:7107459738",
+				"skuId": "4302208436322"
+			},
+			{
+				"names": "M MT9122K摩卡色【加厚款】 ",
+				"pvs": "20509:28315;1627207:7107459738",
+				"skuId": "4302208436331"
+			},
+			{
+				"names": "L MT9122K摩卡色【加厚款】 ",
+				"pvs": "20509:28316;1627207:7107459738",
+				"skuId": "4302208436340"
+			},
+			{
+				"names": "XL MT9122K摩卡色【加厚款】 ",
+				"pvs": "20509:28317;1627207:7107459738",
+				"skuId": "4302208436349"
+			},
+			{
+				"names": "S ML8019驼色【加厚款】 ",
+				"pvs": "20509:28314;1627207:7107459739",
+				"skuId": "4302208436323"
+			},
+			{
+				"names": "M ML8019驼色【加厚款】 ",
+				"pvs": "20509:28315;1627207:7107459739",
+				"skuId": "4302208436332"
+			},
+			{
+				"names": "L ML8019驼色【加厚款】 ",
+				"pvs": "20509:28316;1627207:7107459739",
+				"skuId": "4302208436341"
+			},
+			{
+				"names": "XL ML8019驼色【加厚款】 ",
+				"pvs": "20509:28317;1627207:7107459739",
+				"skuId": "4302208436350"
+			},
+			{
+				"names": "S ML8019黑色【加厚款】 ",
+				"pvs": "20509:28314;1627207:7107459740",
+				"skuId": "4302208436324"
+			},
+			{
+				"names": "M ML8019黑色【加厚款】 ",
+				"pvs": "20509:28315;1627207:7107459740",
+				"skuId": "4302208436333"
+			},
+			{
+				"names": "L ML8019黑色【加厚款】 ",
+				"pvs": "20509:28316;1627207:7107459740",
+				"skuId": "4302208436342"
+			},
+			{
+				"names": "XL ML8019黑色【加厚款】 ",
+				"pvs": "20509:28317;1627207:7107459740",
+				"skuId": "4302208436351"
+			},
+			{
+				"names": "S ML8026粉色 ",
+				"pvs": "20509:28314;1627207:1243642776",
+				"skuId": "4302208436319"
+			},
+			{
+				"names": "M ML8026粉色 ",
+				"pvs": "20509:28315;1627207:1243642776",
+				"skuId": "4302208436328"
+			},
+			{
+				"names": "L ML8026粉色 ",
+				"pvs": "20509:28316;1627207:1243642776",
+				"skuId": "4302208436337"
+			},
+			{
+				"names": "XL ML8026粉色 ",
+				"pvs": "20509:28317;1627207:1243642776",
+				"skuId": "4302208436346"
+			},
+			{
+				"names": "S ML8006黑色 ",
+				"pvs": "20509:28314;1627207:7107459741",
+				"skuId": "4302208436325"
+			},
+			{
+				"names": "M ML8006黑色 ",
+				"pvs": "20509:28315;1627207:7107459741",
+				"skuId": "4302208436334"
+			},
+			{
+				"names": "L ML8006黑色 ",
+				"pvs": "20509:28316;1627207:7107459741",
+				"skuId": "4302208436343"
+			},
+			{
+				"names": "XL ML8006黑色 ",
+				"pvs": "20509:28317;1627207:7107459741",
+				"skuId": "4302208436352"
+			},
+			{
+				"names": "S ML8006棕色 ",
+				"pvs": "20509:28314;1627207:7107459742",
+				"skuId": "4302208436326"
+			},
+			{
+				"names": "M ML8006棕色 ",
+				"pvs": "20509:28315;1627207:7107459742",
+				"skuId": "4302208436335"
+			},
+			{
+				"names": "L ML8006棕色 ",
+				"pvs": "20509:28316;1627207:7107459742",
+				"skuId": "4302208436344"
+			},
+			{
+				"names": "XL ML8006棕色 ",
+				"pvs": "20509:28317;1627207:7107459742",
+				"skuId": "4302208436353"
+			},
+			{
+				"names": "S ML8020米白色 ",
+				"pvs": "20509:28314;1627207:7107459743",
+				"skuId": "4302208436327"
+			},
+			{
+				"names": "M ML8020米白色 ",
+				"pvs": "20509:28315;1627207:7107459743",
+				"skuId": "4302208436336"
+			},
+			{
+				"names": "L ML8020米白色 ",
+				"pvs": "20509:28316;1627207:7107459743",
+				"skuId": "4302208436345"
+			},
+			{
+				"names": "XL ML8020米白色 ",
+				"pvs": "20509:28317;1627207:7107459743",
+				"skuId": "4302208436354"
+			}
+		],
+		"defSelected": [],
+		"skuMap": {
+			";20509:28314;1627207:380868563;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 70,
+				"skuId": "4239830380737"
+			},
+			";20509:28314;1627207:7107459736;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 57,
+				"skuId": "4302208436320"
+			},
+			";20509:28315;1627207:28341;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 78,
+				"skuId": "4239830380739"
+			},
+			";20509:28315;1627207:7107459737;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 149,
+				"skuId": "4302208436330"
+			},
+			";20509:28316;1627207:380868563;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 188,
+				"skuId": "4239830380743"
+			},
+			";20509:28316;1627207:7107459738;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 50,
+				"skuId": "4302208436340"
+			},
+			";20509:28317;1627207:7107459742;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 54,
+				"skuId": "4302208436353"
+			},
+			";20509:28317;1627207:7107459738;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 32,
+				"skuId": "4302208436349"
+			},
+			";20509:28316;1627207:7107459742;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 47,
+				"skuId": "4302208436344"
+			},
+			";20509:28317;1627207:1243642776;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 68,
+				"skuId": "4302208436346"
+			},
+			";20509:28314;1627207:7107459740;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 0,
+				"skuId": "4302208436324"
+			},
+			";20509:28315;1627207:7107459741;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 27,
+				"skuId": "4302208436334"
+			},
+			";20509:28316;1627207:1243642776;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 49,
+				"skuId": "4302208436337"
+			},
+			";20509:28315;1627207:7107459738;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 75,
+				"skuId": "4302208436331"
+			},
+			";20509:28314;1627207:7107459739;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 4,
+				"skuId": "4302208436323"
+			},
+			";20509:28317;1627207:7107459741;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 54,
+				"skuId": "4302208436352"
+			},
+			";20509:28316;1627207:7107459737;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 215,
+				"skuId": "4302208436339"
+			},
+			";20509:28315;1627207:664610925;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 128,
+				"skuId": "4455003410978"
+			},
+			";20509:28316;1627207:664610925;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 119,
+				"skuId": "4455003410979"
+			},
+			";20509:28317;1627207:664610925;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 62,
+				"skuId": "4455003410980"
+			},
+			";20509:28316;1627207:7107459741;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 47,
+				"skuId": "4302208436343"
+			},
+			";20509:28317;1627207:7107459737;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 106,
+				"skuId": "4302208436348"
+			},
+			";20509:28317;1627207:4266701;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 4,
+				"skuId": "4410833735222"
+			},
+			";20509:28314;1627207:28341;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 49,
+				"skuId": "4239830380736"
+			},
+			";20509:28315;1627207:7107459742;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 53,
+				"skuId": "4302208436335"
+			},
+			";20509:28314;1627207:664610925;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 57,
+				"skuId": "4455003410977"
+			},
+			";20509:28314;1627207:7107459743;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 41,
+				"skuId": "4302208436327"
+			},
+			";20509:28315;1627207:7107459739;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 27,
+				"skuId": "4302208436332"
+			},
+			";20509:28315;1627207:4266701;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 24,
+				"skuId": "4349485295240"
+			},
+			";20509:28314;1627207:7107459738;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 80,
+				"skuId": "4302208436322"
+			},
+			";20509:28315;1627207:380868563;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 189,
+				"skuId": "4239830380740"
+			},
+			";20509:28317;1627207:380868563;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 197,
+				"skuId": "4239830380746"
+			},
+			";20509:28317;1627207:7107459736;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 101,
+				"skuId": "4302208436347"
+			},
+			";20509:28316;1627207:4266701;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 14,
+				"skuId": "4349485295241"
+			},
+			";20509:28317;1627207:7107459740;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 19,
+				"skuId": "4302208436351"
+			},
+			";20509:28316;1627207:7107459736;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 207,
+				"skuId": "4302208436338"
+			},
+			";20509:28316;1627207:28341;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 0,
+				"skuId": "4239830380742"
+			},
+			";20509:28314;1627207:4266701;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 10,
+				"skuId": "4349485295239"
+			},
+			";20509:28316;1627207:7107459740;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 5,
+				"skuId": "4302208436342"
+			},
+			";20509:28315;1627207:1243642776;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 54,
+				"skuId": "4302208436328"
+			},
+			";20509:28315;1627207:7107459743;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 52,
+				"skuId": "4302208436336"
+			},
+			";20509:28314;1627207:7107459742;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 51,
+				"skuId": "4302208436326"
+			},
+			";20509:28314;1627207:697778332;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 156,
+				"skuId": "4239830380738"
+			},
+			";20509:28314;1627207:7107459737;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 42,
+				"skuId": "4302208436321"
+			},
+			";20509:28317;1627207:28341;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 0,
+				"skuId": "4239830380745"
+			},
+			";20509:28315;1627207:7107459736;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 126,
+				"skuId": "4302208436329"
+			},
+			";20509:28316;1627207:697778332;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 237,
+				"skuId": "4239830380744"
+			},
+			";20509:28317;1627207:697778332;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 142,
+				"skuId": "4239830380747"
+			},
+			";20509:28315;1627207:697778332;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 169,
+				"skuId": "4239830380741"
+			},
+			";20509:28316;1627207:7107459739;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 36,
+				"skuId": "4302208436341"
+			},
+			";20509:28317;1627207:7107459743;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 44,
+				"skuId": "4302208436354"
+			},
+			";20509:28314;1627207:1243642776;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 60,
+				"skuId": "4302208436319"
+			},
+			";20509:28316;1627207:7107459743;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 44,
+				"skuId": "4302208436345"
+			},
+			";20509:28317;1627207:7107459739;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 48,
+				"skuId": "4302208436350"
+			},
+			";20509:28314;1627207:7107459741;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 26,
+				"skuId": "4302208436325"
+			},
+			";20509:28315;1627207:7107459740;": {
+				"priceCent": 33200,
+				"price": "332.00",
+				"stock": 4,
+				"skuId": "4302208436333"
+			}
+		},
+		"salesProp": {}
+	},
+	"valLoginIndicator": "//buy.taobao.com/auction/buy.htm?from=itemDetail&id=584180190359",
+	"isShowSizeRecommend": false,
+	"isDoubleElevenItem": true,
+	"isHouseholdService": false,
+	"isSevenDaysRefundment": false,
+	"apiBidCount": "//tbskip.taobao.com/json/show_bid_count.htm?itemNumId=584180190359&old_quantity=1500&date=1585103007000",
+	"valTimeLeft": 267550,
+	"standingDate": 0,
+	"tradeParams": {},
+	"api": {
+		"descUrl": "//dscnew.taobao.com/i8/580/180/584180190359/TB1nUFwi7T2gK0jSZFk8qwIQFla.desc%7Cvar%5Edesc%3Bsign%5E9001639b096e1346ae1082c22635eafe%3Blang%5Egbk%3Bt%5E1583685213",
+		"httpsDescUrl": "//descnew.taobao.com/i8/580/180/584180190359/TB1nUFwi7T2gK0jSZFk8qwIQFla.desc%7Cvar%5Edesc%3Bsign%5E9001639b096e1346ae1082c22635eafe%3Blang%5Egbk%3Bt%5E1583685213",
+		"fetchDcUrl": "//hdc1new.taobao.com/asyn.htm?pageId=1528719909&userId=2068700049"
+	},
+	"tag": {
+		"isShowMeiliXinde": false,
+		"isMedical": false,
+		"isRightRecommend": true,
+		"isShowEcityIcon": false,
+		"isShowYuanchuanIcon": false,
+		"isBrandAttr": true,
+		"isShowTryReport": false,
+		"isAsynDesc": true,
+		"isBrandSiteRightColumn": true,
+		"isShowHouseIcon": false
+	},
+	"isService": false,
+	"isTripUser": false,
+	"cmCatId": "0",
+	"cartEnable": true,
+	"renderSystemServer": "//render.taobao.com",
+	"carCascade": false,
+	"isWTContract": false,
+	"isOnlyInMobile": false,
+	"isAreaSell": false,
+	"isMultiPoint": false,
+	"isShowSizeHelper": false,
+	"isMeiz": false,
+	"newSelectCityApi": "//mdskip.taobao.com/json/detailSelectCity.do?isAreaSell=false&itemId=584180190359",
+	"initCspuExtraApi": "//ext-mdskip.taobao.com/extension/initCspuExtra.htm",
+	"detail": {
+		"isMemberShopItem": false,
+		"isBundleItem": false,
+		"canEditInItemDet": true,
+		"isAllowReport": true,
+		"isHiddenShopAction": false,
+		"isDownShelf": false,
+		"is0YuanBuy": false,
+		"isCarService": false,
+		"isShowEcityBasicSign": false,
+		"isItemAllowSellerView": true,
+		"goNewAuctionFlow": false,
+		"isShowEcityVerticalSign": false,
+		"reviewListType": 1,
+		"rxShowTitle": "本品为处方药，请在医师指导下使用。",
+		"isVaccine": false,
+		"isHasPos": false,
+		"recommendBigMarkDownEndTime": "1477880000000",
+		"isAutoYushou": false,
+		"isOnePriceCar": false,
+		"isVitual3C": false,
+		"rxIcon": "https://gw.alicdn.com/tfs/TB13T_zHHrpK1RjSZTEXXcWAVXa-216-84.png",
+		"isFullCarSell": false,
+		"isHideAttentionBtn": false,
+		"isNABundleItem": false,
+		"double11StartTime": "",
+		"showDiscountRecommend": false,
+		"enableAliMedicalComponent": true,
+		"isOtcDrug": false,
+		"isYYZY": false,
+		"mlhNewDesc": false,
+		"isMainLiaoSku": false,
+		"isHkMilk": false,
+		"isEnableAppleSku": true,
+		"isHkItem": false,
+		"isShowContentModuleTitle": false,
+		"isRx2Count": true,
+		"isHiddenNonBuyprice": false,
+		"isH5NewLogin": true,
+		"isHkO2OItem": false,
+		"isSavingEnergy": false,
+		"showFushiPoiInfo": false,
+		"defaultItemPrice": "332.00",
+		"globalSellItem": false,
+		"isShowEcityDesc": false,
+		"isSkuColorShow": false,
+		"autoccUser": false,
+		"isMenDianInventroy": false,
+		"isMeilihui": false,
+		"isLadderGroupon": false,
+		"isHidePoi": false,
+		"isNewAttraction": true,
+		"isPreSellBrand": false,
+		"loginBeforeCart": false,
+		"isAutoFinancing": false,
+		"showSuperMarketBuy": false,
+		"isPrescriptionDrug": false,
+		"isHasQualification": false,
+		"recommendBigMarkDownStartTime": "1478793600000",
+		"pageType": "default",
+		"isIFCShop": false,
+		"isAlicomMasterCard": false,
+		"isCarCascade": false,
+		"isDianQiMeiJia": false,
+		"isSkuMemorized": false,
+		"addressLevel": 2,
+		"isRx2": false,
+		"isTeMai": false,
+		"allowRate": true,
+		"isShowPreClosed": false,
+		"isO2OStaging": false,
+		"isPurchaseMallVipBuyer": false,
+		"cdn75": false,
+		"isNewMedical": false,
+		"isCarYuEBao": false,
+		"isCyclePurchase": false,
+		"isAliTelecomNew": false,
+		"show9sVideo": true,
+		"isHkDirectSale": false,
+		"isTspace": false,
+		"tryReportDisable": false,
+		"isB2Byao": false,
+		"isRegionLevel": false,
+		"isContractPhoneItem": false,
+		"isYY": false,
+		"supermarketAndQianggou": false,
+		"isZhengChe": false,
+		"isDianZiMendian": false,
+		"isNextDayService": false,
+		"timeKillAuction": false
+	},
+	"apiAddCart": "//cart.taobao.com/add_cart_item.htm?item_id=584180190359",
+	"apiBeans": "//count.taobao.com/counter3?keys=SM_368_dsr-2068700049,ICCP_1_584180190359",
+	"idsMod": [],
+	"initApi": "//mdskip.taobao.com/core/initItemDetail.htm?isUseInventoryCenter=false&cartEnable=true&service3C=false&isApparel=true&isSecKill=false&tmallBuySupport=true&isAreaSell=false&tryBeforeBuy=false&offlineShop=false&itemId=584180190359&showShopProm=false&isPurchaseMallPage=false&itemGmtModified=1585355230000&isRegionLevel=false&household=false&sellerPreview=false&queryMemberRight=true&addressLevel=2&isForbidBuyItem=false",
+	"valPointTimes": 1.0,
+	"changeLocationApi": "//mdskip.taobao.com/core/changeLocation.htm?isUseInventoryCenter=false&itemTags=100609,103681,120577,123905,166658,2049,65281,249858,60418,112386,426754,490498,502786,508418,508674,292098,4614,5895,365570,368386,388354,391426,542466,4107,1803,2059,3851,4363,6411,7947,11531,16395,1002498,1226242,1286402,1353218,1353474,1362178,1391874,90433,89665,70465,87361,91713,103489,108865,122177,194626,212546,241218,107842,137281,141121,405058,491074,508482,281666,292674,4678,4166,363842,364610,4171,2635,587,3915,11083,11339,11595,17739,1346882,1353282,1375042,1441090,101761,87425,91777,106881,115329,123521,22145,51329,51585,249986,257922,28802,62082,101762,120962,147585,162177,508546,519298,522882,268418,284802,299394,3974,8326,349570,363650,364674,3466,1163,2443,907,1675,4491,17803,22155,1288066,1461378,1373826,1374082,1434754,67521,108225,120513,28353,33217,37569,40897,257730,15554,25282,57026,72386,107458,155073,159169,481986,493250,504258,508354,508610,299202,299458,302530,4550,1478,347074,362178,363714,364482,368066,531906,4555,1483,2507,3019,4811,5835,6603,7371,15563,1310146,1373634&cartEnable=true&sellerUserTag3=144185556820066432&service3C=false&sellerUserTag2=18015686999670784&isSecKill=false&isAreaSell=false&sellerUserTag4=1729382398646306179&offlineShop=false&itemId=584180190359&sellerUserTag=34672674&showShopProm=false&tgTag=false&isPurchaseMallPage=false&isRegionLevel=false&household=false&notAllowOriginPrice=false&addressLevel=2",
+	"isTmallComboSupport": false,
+	"serviceIconList": [
+		{
+			"description": "该商品加入了“公益宝贝”计划",
+			"tagLink": "//service.taobao.com/support/main/help_quick.htm?q=%25E4%25BB%2580%25E4%25B9%2588%25E6%2598%25AF%25E5%2585%25AC%25E7%259B%258A%25E5%25AE%259D%25E8%25B4%259D%25EF%25BC%259F",
+			"tagImage": "//img.alicdn.com/tps/i4/T18aVfFI0dXXcsE9Te-40-42.png"
+		}
+	],
+	"valPointRate": 0.5,
+	"tradeType": 2,
+	"valMode": 128,
+	"initExtraApi": "//ext-mdskip.taobao.com/extension/initExtra.htm",
+	"itemDO": {
+		"isInRepository": false,
+		"isSupportTryBeforeBuy": false,
+		"reservePrice": "332.00",
+		"isSecondKillFromMobile": false,
+		"cspuCategorySwitch": false,
+		"isOnline": true,
+		"title": "毛呢外套女中长款2019秋冬新品女装韩版毛呢大衣流行显瘦呢子外套",
+		"isEnterprisePath": false,
+		"showCompanyPurchase": false,
+		"isDcAsyn": true,
+		"feature": "1",
+		"attachImgUrl": [
+			"//img.alicdn.com/imgextra/i1/2068700049/O1CN01OK33y31CETyEteCnS_!!2068700049.jpg",
+			"//img.alicdn.com/imgextra/i2/2068700049/O1CN01oeLWhH1CETyGr5sZI_!!2068700049.jpg"
+		],
+		"isElecCouponItem": false,
+		"brandSiteId": "0",
+		"brandSpecialSold": "false",
+		"sellerNickName": "%E8%95%BE%E5%8F%AF%E5%A6%AE%E6%96%AF%E6%97%97%E8%88%B0%E5%BA%97",
+		"isSecondKillFromPC": false,
+		"auctionType": "b",
+		"encryptSellerId": "UvCNLOmcWvmN0OQTT",
+		"prov": "浙江",
+		"brand": "蕾可妮斯",
+		"isDefaultChooseTryBeforeBuy": false,
+		"quantity": 4047,
+		"isBidden": false,
+		"hasSku": true,
+		"isNewProGroup": false,
+		"weight": "0",
+		"userId": "2068700049",
+		"rootCatId": "16",
+		"itemId": "584180190359",
+		"validatorUrl": "//store.taobao.com/tadget/shop_stats.htm",
+		"isCustomizedItem": false,
+		"auctionStatus": "0",
+		"isSecondKillFromPCAndWap": false,
+		"brandId": "591442248",
+		"sellProgressiveRate": "3_100_1.60;6_0_4.50;9_0_6.00",
+		"spuId": "1127433488",
+		"categoryId": "50013194"
+	},
+	"rateConfig": {
+		"itemId": 584180190359,
+		"sellerId": 2068700049,
+		"rateScoreCacheDisable": false,
+		"rateSubjectDisable": false,
+		"tryReportDisable": false,
+		"rateScoreDisable": false,
+		"rateEnable": true,
+		"spuId": 1127433488,
+		"rateNewChartDisable": false,
+		"listType": 1,
+		"rateCloudDisable": false
+	},
+	"rstShopId": 110299403,
+	"propertyPics": {
+		";1627207:1243642776;": [
+			"//img.alicdn.com/imgextra/i1/2068700049/O1CN01Rloq4u1CETzS8mlsc_!!2068700049.jpg"
+		],
+		";1627207:28341;": [
+			"//img.alicdn.com/imgextra/i2/2068700049/O1CN01gbwdsI1CETyJ77fe4_!!2068700049.jpg"
+		],
+		";1627207:697778332;": [
+			"//img.alicdn.com/imgextra/i4/2068700049/O1CN01tTwjUy1CETyF81m9a_!!2068700049.jpg"
+		],
+		";1627207:7107459739;": [
+			"//img.alicdn.com/imgextra/i3/2068700049/O1CN01HgYw2o1CETzPyPJ3X_!!2068700049.jpg"
+		],
+		";1627207:7107459737;": [
+			"//img.alicdn.com/imgextra/i2/2068700049/O1CN01oIs6dk1CETzOESOnd_!!2068700049.jpg"
+		],
+		";1627207:7107459738;": [
+			"//img.alicdn.com/imgextra/i2/2068700049/O1CN01apso5q1CETzPyRFq9_!!2068700049.jpg"
+		],
+		"default": [
+			"//img.alicdn.com/imgextra/i1/2068700049/O1CN01b9W5aD1CETxRfVXLH_!!0-item_pic.jpg",
+			"//img.alicdn.com/imgextra/i4/2068700049/O1CN01avLAiQ1CETtRQhRyR_!!2068700049.jpg",
+			"//img.alicdn.com/imgextra/i4/2068700049/O1CN01nDkSQn1CETtShKZEC_!!2068700049.jpg",
+			"//img.alicdn.com/imgextra/i2/2068700049/O1CN01oY32eb1CETtUE3hu0_!!2068700049.jpg",
+			"//img.alicdn.com/imgextra/i1/2068700049/O1CN01MLPdIS1CETyASvMju_!!2068700049.jpg"
+		],
+		";1627207:7107459736;": [
+			"//img.alicdn.com/imgextra/i1/2068700049/O1CN01PLHZ8D1CETzQ8JRWg_!!2068700049.jpg"
+		],
+		";1627207:7107459742;": [
+			"//img.alicdn.com/imgextra/i3/2068700049/O1CN01DCLw3o1CETzUXkrgf_!!2068700049.jpg"
+		],
+		";1627207:7107459743;": [
+			"//img.alicdn.com/imgextra/i4/2068700049/O1CN014I27zs1CETzS8nmFB_!!2068700049.jpg"
+		],
+		";1627207:7107459740;": [
+			"//img.alicdn.com/imgextra/i3/2068700049/O1CN01D7ZT4H1CETzRyEbfB_!!2068700049.jpg"
+		],
+		";1627207:7107459741;": [
+			"//img.alicdn.com/imgextra/i1/2068700049/O1CN01FtM2Lg1CETzPfOl8p_!!2068700049.jpg"
+		],
+		";1627207:380868563;": [
+			"//img.alicdn.com/imgextra/i3/2068700049/O1CN01llBypj1CETyLgv75e_!!2068700049.jpg"
+		],
+		";1627207:4266701;": [
+			"//img.alicdn.com/imgextra/i4/2068700049/O1CN01qg6hkj1CETyJthCED_!!2068700049.jpg"
+		],
+		";1627207:664610925;": [
+			"//img.alicdn.com/imgextra/i3/2068700049/O1CN01paS10R1CETz4iuUbN_!!2068700049.jpg"
+		]
+	},
+	"tmallRateType": 0,
+	"selectRegionApi": "//mdskip.taobao.com/core/selectRegion.do?isAreaSell=false&itemId=584180190359",
+	"apiItemViews": "//count.taobao.com/counter2?keys=ICVT_7_584180190359&inc=ICVT_7_584180190359&sign=721baa52fd9d40652b1e641fc27e6665ebb",
+	"tagsId": "100609,103681,120577,123905,166658,2049,65281,249858,60418,112386,426754,490498,502786,508418,508674,292098,4614,5895,365570,368386,388354,391426,542466,4107,1803,2059,3851,4363,6411,7947,11531,16395,1002498,1226242,1286402,1353218,1353474,1362178,1391874,90433,89665,70465,87361,91713,103489,108865,122177,194626,212546,241218,107842,137281,141121,405058,491074,508482,281666,292674,4678,4166,363842,364610,4171,2635,587,3915,11083,11339,11595,17739,1346882,1353282,1375042,1441090,101761,87425,91777,106881,115329,123521,22145,51329,51585,249986,257922,28802,62082,101762,120962,147585,162177,508546,519298,522882,268418,284802,299394,3974,8326,349570,363650,364674,3466,1163,2443,907,1675,4491,17803,22155,1288066,1461378,1373826,1374082,1434754,67521,108225,120513,28353,33217,37569,40897,257730,15554,25282,57026,72386,107458,155073,159169,481986,493250,504258,508354,508610,299202,299458,302530,4550,1478,347074,362178,363714,364482,368066,531906,4555,1483,2507,3019,4811,5835,6603,7371,15563,1310146,1373634",
+	"url": {
+		"tbskip": "//tbskip.taobao.com",
+		"mdskip": "//mdskip.taobao.com",
+		"tradeForOldTmallBuy": "//stay.buy.tmall.com/order/confirm_order.htm",
+		"tgDetailDomain": "//detail.ju.taobao.com",
+		"detailServer": "//detail.taobao.com",
+		"buyBase": "//buy.taobao.com/auction",
+		"mallList": "//list.tmall.com",
+		"extMdskip": "//ext-mdskip.taobao.com",
+		"xCrossServer": "//mdetail.tmall.com",
+		"tgDomain": "//ju.taobao.com",
+		"rate": "//rate.tmall.com",
+		"tradeBaseUrl": "//trade.taobao.com/trade",
+		"topUploadServerBaseUrl": "//upload.taobao.com",
+		"BIDRedirectionitemDomain": "//paimai.taobao.com"
+	},
+	"tradeConfig": {
+		"1": "//buy.taobao.com/auction/buy_now.jhtml",
+		"2": "//buy.tmall.com/order/confirm_order.htm",
+		"3": "//obuy.tmall.com/home/order/confirm_order.htm",
+		"4": "",
+		"7": "//tw.taobao.com/buy/auction/buy_now.jhtml"
+	},
+	"valCartInfo": {
+		"itemId": "584180190359",
+		"cartUrl": "//cart.taobao.com/my_cart.htm?from=bdetail",
+		"statsUrl": "//go.mmstat.com/1.gif?logtype=2&category=cart_{loc}_50013194"
+	},
+	"isAliTripHK": false,
+	"selectCityApi": "//mdskip.taobao.com/core/selectCity.htm?isAreaSell=false&itemId=584180190359",
+	"getProgressiveInfoApi": "//mdskip.taobao.com/core/getProgressiveInfo.do?platform_type=b2c&fromTryBeforeBuy=false&sellerId=2068700049&platform=tmall&category=50013194&sellerPercent=3_100_1.60;6_0_4.50;9_0_6.00"
+}

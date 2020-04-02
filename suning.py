@@ -6,6 +6,7 @@ from pykeyboard import PyKeyboard
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.remote.webdriver import WebDriver as RemoteWebDriver
+from selenium.webdriver.common.action_chains import ActionChains
 
 # 上传照片间隔
 seconds = 2
@@ -203,7 +204,8 @@ class Suning():
 			css_selector = "tr[key='" + color + "^"+ size + "']>td.colortd>div.colorbox>div.lcolor>a.colorup>a"
 			ele = browser.find_element_by_css_selector(css_selector)
 			ele.location_once_scrolled_into_view
-			ele.click()
+			browser.execute_script("arguments[0].click();", ele)
+			#ele.click()
 			time.sleep(4)
 			pyk.type_string(image_path)
 			time.sleep(int(upload_image_seconds))
@@ -227,7 +229,8 @@ class Suning():
 			css_selector = "tr[key='" + color + "']>td.colortd>div.colorbox>div.lcolor>a.colorup>a"
 			ele = browser.find_element_by_css_selector(css_selector)
 			ele.location_once_scrolled_into_view
-			ele.click()
+			#ele.click()
+			browser.execute_script("arguments[0].click();", ele)
 			time.sleep(2)
 			pyk.type_string(image_path)
 			time.sleep(int(upload_image_seconds))
@@ -265,7 +268,8 @@ class Suning():
 		css_selector = "tr>td.laign>div>div.adoptm>ul.propic>li.ywxpic>div#file_transparent_upload1>a.uploadfive-button"
 		ele = browser.find_element_by_css_selector(css_selector)
 		ele.location_once_scrolled_into_view
-		ele.click()
+		browser.execute_script("arguments[0].click();", ele)
+		#ele.click()
 		time.sleep(2)
 		pyk.type_string(img_path)
 		time.sleep(2)
